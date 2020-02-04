@@ -1,4 +1,4 @@
-var components = ["navigation", "text", "hero", "modal-card"];
+var components = ["navigation", "text", "hero", "modal-card", "color-navigation"];
 
 
 $.each(components, function (index, value) {
