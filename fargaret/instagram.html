@@ -1,0 +1,45 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Marbodal</title>
+    <meta name="description" content="Marbodal färgåret">
+    <link rel="stylesheet" href="base-styles.css?v=1.0">
+    <link rel="stylesheet" href="styles.css?v=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <div class="static-slider static-slider--full-height">
+        <div class="static-slider__content">
+            <div class="static-slider__header-content">
+                <h1 class="static-slider__header">
+                    <span class="static-slider__header--bold">Vår nya färgkollektion</span>
+                    <span class="static-slider__header--thin">"Jordnära"</span></h1>
+            </div>
+        </div>
+
+        <img style="width:100%; height: auto;" src="images/insta-top.png">
+        <img style="width: 51px; position: absolute; bottom: 32px; right: 16px;" src=" images/insta-share.png">
+
+        <img style="width: 50px; position: absolute; bottom: 24px; left: calc(50% - 25px); "
+            src=" images/insta-more.png">
+
+    </div>
+    <script src="scripts.js?v=1.0"></script>
+
+    <script>
+        $('body').click(function (e) {
+            window.location.href = "overview-instagram.html";
+        });
+    </script>
+</body>
+
+</html>
