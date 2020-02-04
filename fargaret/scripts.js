@@ -2,7 +2,7 @@ var components = ["navigation", "text", "hero", "modal-card"];
 
 
 $.each(components, function (index, value) {
-    $.get("/components/" + value + ".html", function (data) {
+    $.get("components/" + value + ".html", function (data) {
         $.each($("component[data-name='" + value + "']"), function (index, existing) {
             var json = $(existing).attr('data-parameters');
             if (json) {
