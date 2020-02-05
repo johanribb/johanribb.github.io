@@ -88,6 +88,7 @@ body {
     margin: 0 auto;
     -webkit-font-smoothing: antialiased;
     margin-top: 38px;
+    letter-spacing: 1.4px;
 }
 
 .static-slider__cta:hover {
