@@ -20,10 +20,19 @@
         <component data-name="navigation"></component>
         <component data-name="color-navigation"></component>
 
-        <div class="video-container video-container--background video-container--frontpage">
-            <div class="video video--16-9"> <iframe
+        <div style="overflow: hidden;" class="video-container video-container--background video-container--frontpage">
+            <div class="video video--16-9">
+
+                <video class="video" controls autoplay>
+                    <source src="images/video.mp4" type="video/mp4">
+                </video>
+                <!--
+                <iframe
                     src="https://player.vimeo.com/video/363536127?portrait=0&amp;color=fff&amp;title=0&amp;byline=0&amp;badge=0&amp;background=1"
-                    frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe> </div>
+                    frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="">
+                </iframe>
+                -->
+            </div>
             <div style="position: absolute;top: 50%;width: 100%;" class="video__content">
 
                 <div class="static-slider__content">
@@ -229,7 +238,7 @@
         .section-container__content {
             width: 100%;
             top: 50%;
-            transform: translateY(-100%);
+            transform: translateY(100%);
             position: absolute;
         }
 
