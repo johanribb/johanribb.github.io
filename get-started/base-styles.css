@@ -1,0 +1,96 @@
+@font-face {
+    font-family: 'F37 Ginger';
+    src: url('fonts/F37Ginger-Bold.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'F37 Ginger';
+    src: url('fonts/F37Ginger-BoldItalic.woff2') format('woff2');
+    font-style: italic;
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'F37 Ginger';
+    src: url('fonts/F37Ginger-Italic.woff2') format('woff2');
+    font-style: italic;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'F37 Ginger';
+    src: url('fonts/F37Ginger-Light.woff2') format('woff2');
+    /* IE9 Compat Modes */
+
+    font-style: normal;
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: 'F37 Ginger';
+    src: url('fonts/F37Ginger-LightItalic.woff2') format('woff2');
+    font-style: italic;
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: 'F37 Ginger';
+    src: url('fonts/F37Ginger-Regular.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'F37 Ginger';
+    src: url('fonts/F37Ginger-Thin.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: 'F37 Ginger';
+    src: url('fonts/F37Ginger-ThinItalic.woff2') format('woff2');
+    font-style: italic;
+    font-weight: 100;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+a {
+    text-decoration: none;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}

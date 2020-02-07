@@ -1,0 +1,444 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Marbodal</title>
+    <meta name="description" content="What's your kitchen style?">
+    <link rel="stylesheet" href="base-styles.css?v=1.0">
+    <link rel="stylesheet" href="styles.css?v=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <main>
+
+        <section data-id="#0">
+            <div class="transition transition-fade">
+                <div class="slideshow">
+                    <div class="slideshow__slide"></div>
+                    <div class="slideshow__slide"></div>
+                </div>
+                <div class="content content--white transition transition-fade">
+                    <h1
+                        class="content__header content__header--large transition transition-slide transition-slide--left">
+                        What's your kitchen
+                        style?</h1>
+                    <div data-transition="" class="transition transition-slide transition-slide--left-half-dist">
+                        <a class="content__link" href="#1">Take the test</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="question" data-id="#1" data-question="1">
+            <div class="content">
+                <div class="transition transition-fade">
+                    <p class="question-counter transition transition-slide transition-slide--up">Question 1 of 7</p>
+                </div>
+
+                <div style="transition-delay: 400ms;" class="transition transition-fade">
+                    <h1 style="transition-delay: inherit;"
+                        class="content__header transition transition-slide transition-slide--up">What's your budget?
+                    </h1>
+                </div>
+
+                <div class="question__answers">
+                    <div style="transition-delay: 600ms;" class="question__answer transition transition-fade">
+                        <a data-answer="1" class="content__link transition transition-slide transition-slide--up"
+                            href="#">I feel
+                            stingy</a>
+                    </div>
+                    <div style="transition-delay: 600ms;" class="question__answer transition transition-fade">
+                        <a data-answer="2" class="content__link transition transition-slide transition-slide--up"
+                            href="#">I'm OK</a>
+                    </div>
+                    <div style="transition-delay: 800ms;" class="question__answer transition transition-fade">
+                        <a data-answer="3" class="content__link transition transition-slide transition-slide--up"
+                            href="#">I know, I'll
+                            get what I pay</a>
+                    </div>
+                    <div style="transition-delay: 800ms;" class="question__answer transition transition-fade">
+                        <a data-answer="4" class="content__link transition transition-slide transition-slide--up"
+                            href="#">Unlimited!</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="question" data-id="#question-2" data-question="2">
+            <div class="content">
+                <div class="transition transition-fade">
+                    <p class="question-counter transition transition-slide transition-slide--up">Question 2 of 7</p>
+                </div>
+
+                <div style="transition-delay: 400ms;" class="transition transition-fade">
+                    <h1 style="transition-delay: inherit;"
+                        class="content__header transition transition-slide transition-slide--up">What's your favourite
+                        pet?
+                    </h1>
+                </div>
+
+                <div class="question__answers">
+                    <div style="transition-delay: 600ms;" class="question__answer transition transition-fade">
+                        <a data-answer="1" class="content__link transition transition-slide transition-slide--up"
+                            href="#">Dog</a>
+                    </div>
+                    <div style="transition-delay: 600ms;" class="question__answer transition transition-fade">
+                        <a data-answer="2" class="content__link transition transition-slide transition-slide--up"
+                            href="#">Cat</a>
+                    </div>
+                    <div style="transition-delay: 800ms;" class="question__answer transition transition-fade">
+                        <a data-answer="3" class="content__link transition transition-slide transition-slide--up"
+                            href="#">Cockroach</a>
+                    </div>
+                    <div style="transition-delay: 800ms;" class="question__answer transition transition-fade">
+                        <a data-answer="4" class="content__link transition transition-slide transition-slide--up"
+                            href="#">I'm allergic</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+    </main>
+
+    <style>
+        * {
+            -webkit-font-smoothing: antialiased
+        }
+
+        section {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .slideshow {
+            position: fixed;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            background: black;
+        }
+
+        .slideshow__slide {
+            position: absolute;
+            background-image: url('images/cover-1.jpg');
+            width: calc(100% + 100px);
+            height: 100%;
+            background-size: cover;
+            background-position: right bottom;
+
+            /* 0.8 */
+            opacity: 0;
+
+
+            animation-timing-function: linear;
+
+
+        }
+
+        @keyframes slideshow__animation {
+            0% {
+                transform: translateX(0);
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 0.8;
+            }
+
+            90% {
+                opacity: 0.8;
+            }
+
+            100% {
+                opacity: 0.8;
+                transform: translateX(-100px);
+            }
+        }
+
+        .content {
+            position: absolute;
+            z-index: 1;
+            color: black;
+            text-align: center;
+
+            top: 50%;
+            left: 50%;
+            transform: translate3d(-50%, -58%, 0);
+            width: 100%;
+
+            padding: 0 10%;
+
+        }
+
+        .content--white {
+            color: white;
+        }
+
+        .content__header {
+            font-size: 52px;
+            line-height: 1.2;
+            margin-bottom: 38px;
+            font-weight: 700;
+            letter-spacing: -1px;
+        }
+
+        .content__header--large {
+            font-size: 60px;
+            margin-bottom: 50px;
+        }
+
+        .content__link {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1.6px;
+            padding: 15px 26px;
+            border: 1px solid black;
+            border-radius: 2px;
+            color: black;
+            display: inline-block;
+
+            transition: background-color 0.1s ease, color 0.05s ease;
+        }
+
+        .content--white .content__link {
+            border: 1px solid white;
+            color: white;
+        }
+
+        .content__link:hover {
+            background-color: black;
+            color: white;
+        }
+
+        .content--white .content__link:hover {
+            background-color: white;
+            color: black;
+        }
+
+        .question-counter {
+            font-size: 14px;
+            margin-bottom: 26px;
+            opacity: 0.4;
+            font-weight: 200;
+        }
+
+        .question__answers {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .question__answer {
+            width: calc(50% - 16px);
+            margin-top: 16px;
+
+        }
+
+        .question__answer .content__link {
+            display: block;
+            padding: 32px 16px;
+            width: 100%;
+            transition-delay: inherit;
+            margin: 0;
+        }
+
+        .transition-fade {
+            transition: opacity 2s ease;
+            opacity: 0;
+        }
+
+        .transition-active .transition-fade {
+            opacity: 1;
+        }
+
+        .transition-slide {
+            transition: transform 2.0s cubic-bezier(0.29, 0.49, 0.19, 1);
+        }
+
+        .transition-slide--left {
+            transform: translateX(80px);
+        }
+
+        .transition-slide--left-half-dist {
+            transform: translateX(40px);
+        }
+
+        .transition-slide--up {
+            transition-duration: 1s;
+            transform: translateY(100px);
+        }
+
+        .transition-active .transition-slide {
+            transform: none;
+        }
+
+        .transition {
+            transition-delay: 0.2s;
+        }
+
+        .transition-instant--fall-down {
+            transition-delay: 0s !important;
+            opacity: 0.0;
+            transition: transform 0.15s cubic-bezier(0.2, 0.04, 0.57, 1.41), opacity 0.28s ease;
+
+        }
+
+        .transition-instant--slide-left {
+            transform: translateX(-100%) !important;
+            transition: transform 1s cubic-bezier(0.67, 0.01, 0.43, 0.99) !important;
+        }
+
+        .transition-instant--fade-out {
+            opacity: 0 !important;
+            transition: opacity 0.25s ease !important;
+
+        }
+
+        section {
+            pointer-events: none;
+        }
+
+        .transition-active {
+            pointer-events: all;
+        }
+    </style>
+
+
+    <script>
+        function getPageIndex() {
+            var hash = document.location.hash;
+            if (hash) {
+                hash = hash.replace("#", "");
+
+                var parsed = parseInt(hash);
+
+                if (isNaN(parsed)) {
+                    return 0
+                } else {
+                    return parsed;
+                }
+            } else {
+                return 0;
+            }
+        }
+
+
+
+        $(window).on('hashchange', function (e) {
+
+            $('section').removeClass('transition-active');
+
+            setTimeout(function () {
+                var nextSection = $('main section').eq(getPageIndex());
+                nextSection.css('display', '');
+                nextSection[0].offsetHeight;
+                nextSection.addClass('transition-active');
+            }, 500);
+        });
+
+
+        $(function () {
+
+
+            $('main section').eq(getPageIndex()).addClass('transition-active');
+
+
+            $('.question__answer .content__link').click(function (e) {
+                e.preventDefault();
+                var links = $(this).closest('.question__answers').find('.content__link');
+                var sender = $(this);
+                var currentSection = $(sender).closest('section');
+
+                var answer = $(this).attr('data-answer');
+
+                $.each(links, function (index, value) {
+                    if ($(value).attr('data-answer') != answer) {
+                        $(value).addClass('transition-instant--fall-down');
+                    }
+                });
+
+                setTimeout(function () {
+
+                    currentSection.addClass('transition-instant--fade-out');
+
+                    setTimeout(function () {
+
+                        currentSection.css('display', 'none');
+
+                        $(sender).closest('section').removeClass('transition-active');
+
+                        $(sender).closest('section').find(
+                            '.transition-instant--fall-down').removeClass(
+                            'transition-instant--fall-down');
+
+                        $(sender).closest('section').removeClass(
+                            'transition-instant--fade-out');
+
+                        document.location.hash = "#" + (getPageIndex() + 1);
+                    }, 500);
+
+                }, 800);
+            });
+
+
+
+            var slides = $('.slideshow__slide');
+            var duration = 10;
+            var transition = 0.5;
+
+            function setupSlides() {
+                $.each(slides, function (index, slide) {
+                    slide = $(slide);
+
+                    slide.css('animation-name', '');
+                    slide.offsetHeight;
+
+                    slide.css({
+                        'animation-name': 'slideshow__animation',
+                        'animation-duration': duration + 's',
+                        'animation-delay': ((duration - transition) * index) + 's'
+                    });
+
+                    if (index == slides.length - 1) {
+                        slide.on('animationend', function () {
+                            console.log('ended');
+                            setupSlides();
+                        });
+                    }
+                });
+            }
+            setupSlides();
+
+            /*
+            $('.slideshow__slide').on('animationend', function () {
+                
+                                animation-name: slideshow__animation;
+                            animation-timing-function: linear;
+                            animation-duration: 3s;
+                            
+            
+            });
+            */
+        });
+    </script>
+
+
+    <script src="scripts.js?v=1.0"></script>
+</body>
+
+</html>
