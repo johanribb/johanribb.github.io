@@ -24,14 +24,13 @@
         <section data-id="#0">
             <div class="transition transition-fade">
                 <div class="slideshow">
-                    <div class="slideshow__slide"></div>
-                    <div class="slideshow__slide"></div>
+                    <div style="background-image: url('images/cover-1.jpg');" class="slideshow__slide"></div>
+                    <div style="background-image: url('images/cover-2.jpg');" class="slideshow__slide"></div>
                 </div>
                 <div class="content content--white transition transition-fade">
                     <h1
                         class="content__header content__header--large transition transition-slide transition-slide--left">
-                        What's your kitchen
-                        style?</h1>
+                        What's your kitchen style?</h1>
                     <div data-transition="" class="transition transition-slide transition-slide--left-half-dist">
                         <a class="content__link" href="#1">Take the test</a>
                     </div>
@@ -416,7 +415,6 @@
 
                     if (index == slides.length - 1) {
                         slide.on('animationend', function () {
-                            console.log('ended');
                             setupSlides();
                         });
                     }
