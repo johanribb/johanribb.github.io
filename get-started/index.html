@@ -156,16 +156,16 @@
                 opacity: 0;
             }
 
-            10% {
+            20% {
                 opacity: 0.8;
             }
 
-            90% {
+            80% {
                 opacity: 0.8;
             }
 
             100% {
-                opacity: 0.8;
+                opacity: 0;
                 transform: translateX(-100px);
             }
         }
@@ -399,14 +399,14 @@
 
             var slides = $('.slideshow__slide');
             var duration = 10;
-            var transition = 0.5;
+            var transition = 2;
 
             function setupSlides() {
                 $.each(slides, function (index, slide) {
                     slide = $(slide);
 
                     slide.css('animation-name', '');
-                    slide.offsetHeight;
+                    slide[0].offsetHeight;
 
                     slide.css({
                         'animation-name': 'slideshow__animation',
