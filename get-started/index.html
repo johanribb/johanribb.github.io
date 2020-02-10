@@ -21,7 +21,7 @@
     </header>
     <main>
 
-        <section data-id="#0">
+        <section>
             <div class="transition transition-fade">
                 <div class="slideshow">
                     <div style="background-image: url('images/cover-1.jpg');" class="slideshow__slide"></div>
@@ -39,7 +39,7 @@
         </section>
 
 
-        <section class="question" data-id="#1" data-question="1">
+        <section class="question">
             <div class="content">
                 <div class="transition transition-fade">
                     <p class="question-counter transition transition-slide transition-slide--up">Question 1 of 7</p>
@@ -50,31 +50,32 @@
                         class="content__header transition transition-slide transition-slide--up">What's your budget?
                     </h1>
                 </div>
-
                 <div class="question__answers">
                     <div style="transition-delay: 600ms;" class="question__answer transition transition-fade">
-                        <a data-answer="1" class="content__link transition transition-slide transition-slide--up"
-                            href="#">I feel
-                            stingy</a>
+                        <div class="transition transition-delay-inherit transition-slide transition-slide--up">
+                            <a data-answer="1" class="content__link" href="#">I feel stingy</a>
+                        </div>
                     </div>
                     <div style="transition-delay: 600ms;" class="question__answer transition transition-fade">
-                        <a data-answer="2" class="content__link transition transition-slide transition-slide--up"
-                            href="#">I'm OK</a>
+                        <div class="transition transition-delay-inherit transition-slide transition-slide--up">
+                            <a data-answer="2" class="content__link" href="#">I'm OK</a>
+                        </div>
                     </div>
                     <div style="transition-delay: 800ms;" class="question__answer transition transition-fade">
-                        <a data-answer="3" class="content__link transition transition-slide transition-slide--up"
-                            href="#">I know, I'll
-                            get what I pay</a>
+                        <div class="transition transition-delay-inherit transition-slide transition-slide--up">
+                            <a data-answer="3" class="content__link" href="#">I know, I'll get what I pay</a>
+                        </div>
                     </div>
                     <div style="transition-delay: 800ms;" class="question__answer transition transition-fade">
-                        <a data-answer="4" class="content__link transition transition-slide transition-slide--up"
-                            href="#">Unlimited!</a>
+                        <div class="transition transition-delay-inherit transition-slide transition-slide--up">
+                            <a data-answer="4" class="content__link" href="#">Unlimited!</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="question" data-id="#question-2" data-question="2">
+        <section class="question">
             <div class="content">
                 <div class="transition transition-fade">
                     <p class="question-counter transition transition-slide transition-slide--up">Question 2 of 7</p>
@@ -89,20 +90,24 @@
 
                 <div class="question__answers">
                     <div style="transition-delay: 600ms;" class="question__answer transition transition-fade">
-                        <a data-answer="1" class="content__link transition transition-slide transition-slide--up"
-                            href="#">Dog</a>
+                        <div class="transition transition-delay-inherit transition-slide transition-slide--up">
+                            <a data-answer="1" class="content__link" href="#">Dog</a>
+                        </div>
                     </div>
                     <div style="transition-delay: 600ms;" class="question__answer transition transition-fade">
-                        <a data-answer="2" class="content__link transition transition-slide transition-slide--up"
-                            href="#">Cat</a>
+                        <div class="transition transition-delay-inherit transition-slide transition-slide--up">
+                            <a data-answer="2" class="content__link" href="#">Cat</a>
+                        </div>
                     </div>
                     <div style="transition-delay: 800ms;" class="question__answer transition transition-fade">
-                        <a data-answer="3" class="content__link transition transition-slide transition-slide--up"
-                            href="#">Cockroach</a>
+                        <div class="transition transition-delay-inherit transition-slide transition-slide--up">
+                            <a data-answer="3" class="content__link" href="#">Cockroach</a>
+                        </div>
                     </div>
                     <div style="transition-delay: 800ms;" class="question__answer transition transition-fade">
-                        <a data-answer="4" class="content__link transition transition-slide transition-slide--up"
-                            href="#">I'm allergic</a>
+                        <div class="transition transition-delay-inherit transition-slide transition-slide--up">
+                            <a data-answer="4" class="content__link" href="#">I'm allergic</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -115,7 +120,7 @@
 
     <style>
         * {
-            -webkit-font-smoothing: antialiased
+            -webkit-font-smoothing: antialiased;
         }
 
         section {
@@ -134,19 +139,12 @@
 
         .slideshow__slide {
             position: absolute;
-            background-image: url('images/cover-1.jpg');
             width: calc(100% + 100px);
             height: 100%;
             background-size: cover;
             background-position: right bottom;
-
-            /* 0.8 */
             opacity: 0;
-
-
             animation-timing-function: linear;
-
-
         }
 
         @keyframes slideshow__animation {
@@ -212,6 +210,7 @@
             display: inline-block;
 
             transition: background-color 0.1s ease, color 0.05s ease;
+            user-select: none;
         }
 
         .content--white .content__link {
@@ -252,8 +251,11 @@
             display: block;
             padding: 32px 16px;
             width: 100%;
-            transition-delay: inherit;
             margin: 0;
+        }
+
+        .transition-delay-inherit {
+            transition-delay: inherit !important;
         }
 
         .transition-fade {
@@ -336,12 +338,8 @@
             }
         }
 
-
-
         $(window).on('hashchange', function (e) {
-
             $('section').removeClass('transition-active');
-
             setTimeout(function () {
                 var nextSection = $('main section').eq(getPageIndex());
                 nextSection.css('display', '');
@@ -353,9 +351,7 @@
 
         $(function () {
 
-
             $('main section').eq(getPageIndex()).addClass('transition-active');
-
 
             $('.question__answer .content__link').click(function (e) {
                 e.preventDefault();
@@ -397,7 +393,7 @@
 
 
             var slides = $('.slideshow__slide');
-            var duration = 10;
+            var duration = 14;
             var transition = 2;
 
             function setupSlides() {
@@ -421,17 +417,6 @@
                 });
             }
             setupSlides();
-
-            /*
-            $('.slideshow__slide').on('animationend', function () {
-                
-                                animation-name: slideshow__animation;
-                            animation-timing-function: linear;
-                            animation-duration: 3s;
-                            
-            
-            });
-            */
         });
     </script>
 
