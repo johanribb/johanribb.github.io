@@ -1,21 +1,334 @@
-<div class="color-navigation" style="height: 197px;
-width: 100%;
-overflow-x: overlay;
-overflow-y: hidden;
-position: relative;
-margin-top: -90px;" class="color-navigation">
-    <img style="max-width: none; height: 100%;" src="images/color-nav.png">
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+<nav class="js-c-color-navigation c-color-navigation">
+    <div class="js-c-color-navigation__wrapper c-color-navigation__wrapper">
+        <ul class="js-c-color-navigation__items c-color-navigation__items">
+
+            <li class="c-color-navigation__item">
+                <a href="#" class="c-color-navigation__link">
+                    <figure class="c-color-navigation__image"></figure>
+                    <div class="c-color-navigation__description">
+                        <span class="c-color-navigation__title">Tall</span>
+                        <span class="c-color-navigation__label">Grön</span>
+                    </div>
+                </a>
+            </li>
+
+            <li class="c-color-navigation__item">
+                <a href="#" class="c-color-navigation__link">
+                    <figure class="c-color-navigation__image"></figure>
+                    <div class="c-color-navigation__description">
+                        <span class="c-color-navigation__title">Sand</span>
+                        <span class="c-color-navigation__label">Beige</span>
+                    </div>
+                </a>
+            </li>
+
+            <li class="c-color-navigation__item">
+                <a href="#" class="c-color-navigation__link">
+                    <figure class="c-color-navigation__image"></figure>
+                    <div class="c-color-navigation__description">
+                        <span class="c-color-navigation__title">Hav</span>
+                        <span class="c-color-navigation__label">Blå</span>
+                    </div>
+                </a>
+            </li>
+
+            <li class="c-color-navigation__item">
+                <a href="#" class="c-color-navigation__link">
+                    <figure class="c-color-navigation__image"></figure>
+                    <div class="c-color-navigation__description">
+                        <span class="c-color-navigation__title">Åska</span>
+                        <span class="c-color-navigation__label">Mellangrå</span>
+                    </div>
+                </a>
+            </li>
+
+            <li class="c-color-navigation__item">
+                <a href="#" class="c-color-navigation__link">
+                    <figure class="c-color-navigation__image"></figure>
+                    <div class="c-color-navigation__description">
+                        <span class="c-color-navigation__title">Lin</span>
+                        <span class="c-color-navigation__label">Ljus</span>
+                    </div>
+                </a>
+            </li>
+
+            <li class="c-color-navigation__item">
+                <a href="#" class="c-color-navigation__link">
+                    <figure class="c-color-navigation__image"></figure>
+                    <div class="c-color-navigation__description">
+                        <span class="c-color-navigation__title">Bark</span>
+                        <span class="c-color-navigation__label">Brun</span>
+                    </div>
+                </a>
+            </li>
+
+            <li class="c-color-navigation__item">
+                <a href="#" class="c-color-navigation__link">
+                    <figure class="c-color-navigation__image"></figure>
+                    <div class="c-color-navigation__description">
+                        <span class="c-color-navigation__title">Moln</span>
+                        <span class="c-color-navigation__label">Ljusgrå</span>
+                    </div>
+                </a>
+            </li>
+
+            <li class="c-color-navigation__item">
+                <a href="#" class="c-color-navigation__link">
+                    <figure class="c-color-navigation__image"></figure>
+                    <div class="c-color-navigation__description">
+                        <span class="c-color-navigation__title">Frost</span>
+                        <span class="c-color-navigation__label">Vit</span>
+                    </div>
+                </a>
+            </li>
+
+            <li class="c-color-navigation__item">
+                <a href="#" class="c-color-navigation__link">
+                    <figure class="c-color-navigation__image"></figure>
+                    <div class="c-color-navigation__description">
+                        <span class="c-color-navigation__title">Granit</span>
+                        <span class="c-color-navigation__label">Mörkgrå</span>
+                    </div>
+                </a>
+            </li>
+
+            <li class="c-color-navigation__item">
+                <a href="#" class="c-color-navigation__link">
+                    <figure class="c-color-navigation__image"></figure>
+                    <div class="c-color-navigation__description">
+                        <span class="c-color-navigation__title">Frö</span>
+                        <span class="c-color-navigation__label">Ljusbrun</span>
+                    </div>
+                </a>
+            </li>
 
 
-    <a style="position: absolute; left: 0; top: 0; display: inline-block; height: 100%; width: 21%;"
-        href="color-tall.html"></a>
-
-    <a style="position: absolute; left: 22%; top: 0; display: inline-block; height: 100%; width: 21.5%;"
-        href="color-sand.html"></a>
-</div>
+        </ul>
+        <div data-target="js-c-color-navigation__items" class="js-c-color-navigation__scroll-navigation">
+            <a href="#" data-direction="left" class="c-color-navigation__scroll-button"></a>
+            <a href="#" data-direction="right" class="c-color-navigation__scroll-button"></a>
+        </div>
+    </div>
+</nav>
 
 <style>
-    .color-navigation::-webkit-scrollbar {
-        width: 0 !important
+    .c-color-navigation {
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+        height: 286px;
+        -webkit-font-smoothing: antialiased;
+        background-color: white;
+        margin-top: -178px;
+    }
+
+    .c-color-navigation__wrapper {
+        position: relative;
+        z-index: 1;
+        height: 100%;
+        opacity: 0;
+    }
+
+    .c-color-navigation__items {
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        list-style: none;
+        text-align: center;
+        white-space: nowrap;
+        height: 100%;
+        padding: 0 30px;
+    }
+
+    .c-color-navigation__item {
+        display: inline-block;
+        height: 100%;
+        width: 78px;
+        margin-right: 6px;
+    }
+
+    .c-color-navigation__item:last-child {
+        margin-right: 0;
+    }
+
+    .c-color-navigation__link {
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        color: rgb(102, 102, 102);
+        position: relative;
+        height: 100%;
+    }
+
+    .c-color-navigation__description {
+        margin-top: auto;
+        margin-bottom: 19px;
+
+    }
+
+    .c-color-navigation__title,
+    .c-color-navigation__label {
+        display: block;
+    }
+
+    .c-color-navigation__image {
+        position: absolute;
+        background-image: url(https://johanribb.github.io/fargaret/images/brush-test.jpg);
+        background-size: 46px auto;
+        background-position: center -7px;
+        background-repeat: no-repeat;
+        margin: 0;
+        width: 100%;
+        height: calc(100% - 60px);
+        transition: transform 2.6s cubic-bezier(0, 0.53, 0.32, 0.94);
+    }
+
+    .c-color-navigation__link:hover .c-color-navigation__image {
+        transform: scale3d(1.05, 1.05, 1) translateY(-2px);
+        transition: transform 0.6s cubic-bezier(0, 0.53, 0.32, 0.94);
+    }
+
+    .c-color-navigation__title {
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+    .c-color-navigation__label {
+        font-size: 9px;
+        text-transform: uppercase;
+        opacity: 0.45;
+        margin-top: 5px;
+        letter-spacing: 1px;
+        line-height: 11px;
+    }
+
+    .c-color-navigation__scroll-button {
+        position: absolute;
+        height: 98px;
+        background: rgba(255, 255, 255, 0.1);
+        width: 36px;
+        bottom: 0;
+        backdrop-filter: saturate(20%) blur(20px);
+        display: none;
+    }
+
+    .c-color-navigation__scroll-button[data-direction="left"] {
+        left: 0;
+    }
+
+    .c-color-navigation__scroll-button[data-direction="right"] {
+        right: 0;
+    }
+
+    .c-color-navigation__scroll-button::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 12px;
+        height: 12px;
+
+        border: solid rgba(0, 0, 0, 0.45);
+        border-width: 0 1px 1px 0;
+        display: inline-block;
+        padding: 1px;
+    }
+
+    .c-color-navigation__scroll-button[data-direction="left"]::after {
+        transform: translate3d(-50%, -50%, 0) rotateZ(135deg);
+    }
+
+    .c-color-navigation__scroll-button[data-direction="right"]::after {
+        transform: translate3d(-50%, -50%, 0) rotateZ(-45deg);
+    }
+
+    @media only screen and (max-width: 400px) {
+        .c-color-navigation__items {
+            padding: 0 10px;
+        }
+
+        .c-color-navigation__item {
+            margin-right: 0;
+        }
     }
 </style>
+
+<script>
+    $(function () {
+
+        is_touch_screen = 'ontouchstart' in document.documentElement;
+
+        if (is_touch_screen) {
+
+            $(".js-c-color-navigation__wrapper").css({
+                'transform': 'translateX(40%)',
+                'opacity': 0,
+                'transition': 'opacity 0.4s ease, transform 1.2s cubic-bezier(0, 0.01, 0.41, 1)'
+            });
+
+            $(".js-c-color-navigation__wrapper")[0].offsetHeight;
+
+            setTimeout(() => {
+                $(".js-c-color-navigation__wrapper").css({
+                    'transform': '',
+                    'opacity': 1
+
+                });
+            }, 300);
+        } else {
+            setupNavigationScroll();
+        }
+
+
+        function setupNavigationScroll() {
+            $(".js-c-color-navigation__scroll-navigation").each(function (index, value) {
+                var navigation = $(value);
+                var target = $('.' + navigation.attr('data-target'));
+
+                navigation.find('a').click(function (e) {
+                    e.preventDefault();
+
+                    var left = $(this).attr('data-direction') == 'left';
+
+                    navigation.find('[data-direction="' + (left ? 'left' : 'right') + '"]')
+                        .hide();
+                    navigation.find('[data-direction="' + (left ? 'right' : 'left') + '"]')
+                        .show()
+
+                    target.animate({
+                        scrollLeft: left ? 0 : target[0].scrollWidth
+                    }, "slow", "swing");
+                });
+
+                $(window).resize(function () {
+                    updateButtonVisibility();
+                });
+                target.on('scroll', function () {
+                    updateButtonVisibility();
+                });
+
+                function updateButtonVisibility() {
+                    if (target.scrollLeft() == 0) {
+                        navigation.find('[data-direction="left"]').hide();
+
+                    } else {
+                        navigation.find('[data-direction="left"]').show();
+
+                    }
+                    if ((target.scrollLeft() + target.innerWidth()) >= target[0].scrollWidth) {
+                        navigation.find('[data-direction="right"]').hide();
+                    } else {
+                        navigation.find('[data-direction="right"]').show();
+                    }
+                }
+                updateButtonVisibility();
+            });
+
+        }
+
+    });
+</script>

@@ -16,229 +16,15 @@
 </head>
 
 <body>
-    <div style="z-index: 10; position: relative; background: white">
-        <component data-name="navigation"></component>
-        <component data-name="color-navigation"></component>
 
-        <div style="overflow: hidden;" class="video-container video-container--background video-container--frontpage">
-            <div class="video video--16-9">
-
-                <img style="position: absolute;
-                left: 0;
-                width: 100%;" src="images/video-1.gif">
+    <component data-name="header"></component>
+    <component data-name="color-navigation"></component>
+    <component data-name="video-hero"></component>
+    <component data-name="text"></component>
+    <component data-name="color-sections"></component>
 
 
-
-
-                <!--
-                <iframe
-                    src="https://player.vimeo.com/video/363536127?portrait=0&amp;color=fff&amp;title=0&amp;byline=0&amp;badge=0&amp;background=1"
-                    frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="">
-                </iframe>-->
-
-            </div>
-            <div style="position: absolute;top: 50%;width: 100%;" class="video__content">
-
-                <div class="static-slider__content">
-                    <div class="static-slider__header-content">
-                        <h1 style="padding: 0 10%;" class="static-slider__header">
-                            <span style="font-size: 44px; line-height: 46px;" class="static-slider__header--bold">Våra
-                                nya färger</span>
-                            <span style="text-transform: uppercase; font-size:14px; letter-spacing: 1.4px;"
-                                class="static-slider__header--thin">Kollektionen Jordnära</span></h1>
-
-                    </div>
-                </div>
-
-
-            </div>
-        </div>
-
-        <style>
-            .video-container {
-                position: relative;
-                max-width: 1080px;
-                max-height: calc(100vh - 60px);
-                margin: 40px auto;
-                padding: 0 10px;
-            }
-
-            .video-container--background {
-                max-width: none;
-                margin: 0 -2px;
-                padding: 0;
-                background-color: #f1f1f1;
-            }
-
-
-
-            .video-container .video {
-                position: relative;
-                max-width: 1040px;
-                width: 100%;
-                max-width: 100%;
-                height: 0;
-                margin: 0 auto;
-                padding-bottom: 42.1875%;
-                overflow: hidden;
-            }
-
-            .video-container--background .video {
-                max-width: 177.7778%;
-                width: 177.7778%;
-                margin-left: -38.8889%;
-                padding-bottom: 100%;
-            }
-
-            .video-container iframe,
-            .video-container object,
-            .video-container embed {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-            }
-        </style>
-
-
-        <!--<img style="width: 100%;" src="images/mix-moodboard.png">-->
-        <component data-name="text"></component>
-    </div>
-
-    <div id="sections">
-        <div data-color="878677" class="section-container">
-            <div style="background-image: url('images/tall-bild.jpg')" class="section-container__sticky-content"></div>
-
-
-            <div class="section-container__content">
-                <h2>Tall</h2>
-                <p>NCS S 7005-Y20R</p>
-                <a class="static-slider__cta" href="color-tall.html">Upplev tall</a>
-            </div>
-        </div>
-
-        <div data-color="D2C9B7" class="section-container">
-            <div style="background-image: url('images/sand-bild.jpg')" class="section-container__sticky-content"></div>
-            <div class="section-container__content">
-                <h2>Sand</h2>
-                <p>NCS S 7005-Y20R</p>
-                <a class="static-slider__cta" href="color-sand.html">Upplev sand</a>
-            </div>
-        </div>
-
-        <div data-color="61587F" class="section-container">
-            <div style="background-image: url('images/bark-bild.jpg')" class="section-container__sticky-content"></div>
-            <div class="section-container__content">
-                <h2>Bark</h2>
-                <p>NCS S 7005-Y20R</p>
-                <a class="static-slider__cta" href="#">Upplev bark</a>
-            </div>
-        </div>
-
-        <div data-color="878677" class="section-container">
-            <div style="background-image: url('images/tall-bild.jpg')" class="section-container__sticky-content"></div>
-
-
-            <div class="section-container__content">
-                <h2>Tall</h2>
-                <p>NCS S 7005-Y20R</p>
-                <a class="static-slider__cta" href="color-tall.html">Upplev tall</a>
-            </div>
-        </div>
-
-        <div data-color="D2C9B7" class="section-container">
-            <div style="background-image: url('images/sand-bild.jpg')" class="section-container__sticky-content"></div>
-            <div class="section-container__content">
-                <h2>Sand</h2>
-                <p>NCS S 7005-Y20R</p>
-                <a class="static-slider__cta" href="color-sand.html">Upplev sand</a>
-            </div>
-        </div>
-
-        <div data-color="61587F" class="section-container">
-            <div style="background-image: url('images/bark-bild.jpg')" class="section-container__sticky-content"></div>
-            <div class="section-container__content">
-                <h2>Bark</h2>
-                <p>NCS S 7005-Y20R</p>
-                <a class="static-slider__cta" href="#">Upplev bark</a>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        $(function () {
-
-            var sections = $('#sections');
-
-            $(window).scroll(function () {
-                updateColor();
-            });
-            updateColor();
-        });
-
-        function updateColor() {
-
-
-
-            var scrollTop = $(window).scrollTop();
-            var windowHeight = $(window).height();
-
-
-            var maxInView = 0;
-            var maxIndex = -1;
-            var maxElement = null;
-            var factor = 0;
-            var next = false;
-
-
-            $.each(sections.children, function (index, section) {
-
-                var section = $(section);
-
-                var top = section.offset().top;
-                var height = section.height();
-
-
-                var elH = section.outerHeight(),
-                    H = windowHeight,
-                    r = section[0].getBoundingClientRect(),
-                    t = r.top,
-                    b = r.bottom;
-
-                var visible = Math.max(0, t > 0 ? Math.min(elH, H - t) : Math.min(b, H));
-
-                if (visible >= maxInView) {
-                    maxInView = visible;
-                    maxIndex = index;
-                    maxElement = section;
-                    factor = visible / elH;
-
-                }
-
-            });
-
-            $(sections).find('.section-container__sticky-content').removeClass('active');
-
-            maxElement.find('.section-container__sticky-content').addClass('active');
-
-            if (factor < 0.7) {
-
-
-
-
-
-
-
-
-            } else {
-                //$('body').css('background-color', '#' + (maxElement.attr('data-color')));
-            }
-        }
-    </script>
-
-
-
+    <script src="scripts.js?v=2.0"></script>
 
 
     <style>
@@ -251,16 +37,29 @@
 
         }
 
+
+
         .section-container__sticky-content {
             pointer-events: none;
             top: 0;
-            position: fixed;
             width: 100vw;
-            height: 120vh;
+            height: 100vh;
+
             background-position: center center;
             background-size: cover;
             opacity: 0;
             transition: opacity 0.6s linear;
+            /*
+            background-attachment: fixed;
+            will-change: scroll-position;
+            */
+            /*will-change: opacity;*/
+
+        }
+
+        .sticky .section-container__sticky-content {
+
+            position: fixed;
         }
 
         .section-container__sticky-content.active {
@@ -287,10 +86,10 @@
             font-weight: 200;
 
         }
-
-        .section-container .static-slider__cta {}
     </style>
-    <script src="scripts.js?v=1.0"></script>
+
+
+
 </body>
 
 </html>

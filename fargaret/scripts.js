@@ -1,4 +1,4 @@
-var components = ["navigation", "text", "hero", "modal-card", "color-navigation"];
+var components = ["header", "text", "static-slider", "video-hero", "color-sections", "color-navigation"];
 
 
 $.each(components, function (index, value) {
@@ -16,6 +16,7 @@ $.each(components, function (index, value) {
                 $(existing).replaceWith(data);
             }
         });
+
         if (index == components.length - 1) {
             setupComponents();
         }
@@ -24,6 +25,7 @@ $.each(components, function (index, value) {
 
 
 function setupComponents() {
+
     $('.modal-card').click(function (e) {
         e.preventDefault();
 
