@@ -17,6 +17,7 @@
 
 <body>
 
+
     <div class="c-static-slider c-static-slider--full-height">
         <div class="c-static-slider__content">
             <div style="transform: translateY(-100%);" class="c-static-slider__header-content">
@@ -33,6 +34,7 @@
             src=" images/insta-more.png">
 
     </div>
+
     <script src="scripts.js?v=1.0"></script>
 
     <script>
@@ -40,6 +42,110 @@
             window.location.href = "overview-instagram.html";
         });
     </script>
+
+    <style>
+        .c-static-slider {
+            height: calc(100vh - 106px);
+            background: black;
+            position: relative;
+
+            background-image: url('https://johanribb.github.io/fargaret/images/10-moodboards.jpg');
+            background-size: auto 100%;
+            animation-name: animated-background;
+            animation-duration: 800s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+
+        .c-static-slider--full-height {
+            height: 100vh;
+        }
+
+        @keyframes animated-background {
+            from {
+                background-position: 0% 0;
+            }
+
+            to {
+                background-position: 1000% 0;
+            }
+        }
+
+        .c-static-slider__content {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .c-static-slider__header-content {
+            position: absolute;
+            width: 100%;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            color: white;
+        }
+
+        .c-static-slider__header {
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .c-static-slider__cta {
+            display: inline-block;
+            border: 1px solid white;
+            text-transform: uppercase;
+            color: inherit;
+            padding: 15px 48px;
+            font-size: 13px;
+            border-radius: 4px;
+            margin: 0 auto;
+            -webkit-font-smoothing: antialiased;
+            margin-top: 38px;
+            letter-spacing: 1.4px;
+            text-decoration: none;
+            font-weight: 400;
+            transition: color 0.15s ease, background-color 0.15s ease
+        }
+
+        .c-static-slider__cta:hover {
+            background: white;
+            color: black;
+
+        }
+
+        .c-static-slider__header--thin,
+        .c-static-slider__header--bold {
+            display: block;
+
+        }
+
+        .c-static-slider__header--thin {
+            display: block;
+            font-size: 19px;
+            font-weight: 200;
+
+        }
+
+        .c-static-slider__header--bold {
+            font-size: 39px;
+            line-height: 49px;
+            display: block;
+            margin-bottom: 14px;
+        }
+
+        @media only screen and (max-width: 720px) {
+            .c-static-slider {
+                height: calc(100vh - 96px);
+            }
+
+            .c-static-slider__header-content {
+                top: 36%;
+            }
+        }
+    </style>
 </body>
 
 </html>

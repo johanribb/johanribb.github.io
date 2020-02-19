@@ -1,0 +1,135 @@
+.c-area-filter__top-container {
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+.c-area-filter__filter .c-area-filter__button {
+    margin-top: 30px;
+    width: auto;
+}
+
+.c-area-filter__filter .c-area-filter__button,
+.c-area-filter__filter.not-expanded .c-area-filter__button {
+
+    background: transparent;
+    padding: 12px 0;
+}
+
+.c-area-filter__filter .c-area-filter__toggler-icon {
+    display: none;
+}
+
+.c-area-filter__filter .c-area-filter__button.c-button--style-1:before {
+    background: transparent;
+}
+
+.c-area-filter__filter .c-area-filter__label {
+    margin-left: 47px;
+}
+
+.c-area-filter__label:after {
+    margin-left: 4px;
+    width: 10px;
+    content: "+";
+}
+
+.is-expanded .c-area-filter__label:after {
+    content: "-";
+}
+
+.c-area-filter {
+    margin-bottom: 50px;
+}
+
+.c-area-filter__filter-toggle,
+.c-area-filter__filtered-area {
+    max-width: 1260px;
+    margin: 0 auto;
+}
+
+.c-area-filter__filtered-area .o-grid--gutter-m>.o-grid__column {
+    padding: 0 12px;
+}
+
+/* Mobile */
+@media screen and (max-width: 720px) {
+    .c-area-filter {
+        margin-bottom: 15px;
+    }
+
+    .c-area-filter__button.c-area-filter__button--top {
+        width: 100%;
+        margin: 0;
+    }
+
+    .c-area-filter__filter {
+        padding: 0;
+    }
+
+    .c-area-filter__filtered-area .o-grid--gutter-m>.o-grid__column {
+        padding: 0;
+    }
+
+    .c-area-filter__filtered-area .o-grid--gutter-m {
+        margin: 0;
+    }
+
+    .vue {
+        padding: 50px 15px;
+    }
+}
+
+.c-area-filter__filter .c-area-filter__button:hover::before {
+    box-shadow: 0 0 2px 0px rgba(0, 0, 0, 0.4) inset;
+}
+
+
+/* Theme specific */
+
+/* Marbodal */
+/*
+.c-area-filter__filter.not-expanded .c-area-filter__label,
+.c-area-filter__filter .c-area-filter__label {
+    color: #003a70;
+}
+
+.c-area-filter__filter .c-area-filter__button,
+.c-area-filter__filter.not-expanded .c-area-filter__button {
+    padding: 14px 0 11px;
+}
+*/
+
+/* Magnet */
+/*
+.c-area-filter__filter .c-area-filter__button {
+    border: 1px solid #001b33;
+}
+
+.c-area-filter__filter .c-area-filter__label {
+    color: rgb(1, 29, 36);
+}
+*/
+/* KM */
+/*
+.c-area-filter__filter.not-expanded .c-area-filter__label,
+.c-area-filter__filter .c-area-filter__label {
+    color: rgb(26, 25, 25);
+}
+
+.c-area-filter__filter .c-area-filter__button,
+.c-area-filter__filter.not-expanded .c-area-filter__button {
+    border: 1px solid rgb(26, 25, 25);
+}
+*/
+/* HTH */
+/*
+.c-area-filter__filter.not-expanded .c-area-filter__label,
+.c-area-filter__filter .c-area-filter__label {
+    color: rgb(51, 51, 51);
+}
+
+.c-area-filter__filter .c-area-filter__button,
+.c-area-filter__filter.not-expanded .c-area-filter__button {
+    padding: 13px 0 10px;
+}
+*/

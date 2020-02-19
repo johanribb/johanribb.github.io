@@ -6,7 +6,7 @@
         <ul class="js-c-color-navigation__items c-color-navigation__items">
 
             <li class="c-color-navigation__item">
-                <a href="#" class="c-color-navigation__link">
+                <a href="color-tall.html" class="c-color-navigation__link">
                     <figure class="c-color-navigation__image"></figure>
                     <div class="c-color-navigation__description">
                         <span class="c-color-navigation__title">Tall</span>
@@ -16,7 +16,7 @@
             </li>
 
             <li class="c-color-navigation__item">
-                <a href="#" class="c-color-navigation__link">
+                <a href="color-sand.html" class="c-color-navigation__link">
                     <figure class="c-color-navigation__image"></figure>
                     <div class="c-color-navigation__description">
                         <span class="c-color-navigation__title">Sand</span>
@@ -207,7 +207,7 @@
 
     .c-color-navigation__scroll-button {
         position: absolute;
-        height: 98px;
+        height: 109px;
         background: rgba(255, 255, 255, 0.1);
         width: 36px;
         bottom: 0;
@@ -260,6 +260,8 @@
 <script>
     $(function () {
 
+
+
         is_touch_screen = 'ontouchstart' in document.documentElement;
 
         if (is_touch_screen) {
@@ -276,15 +278,19 @@
                 $(".js-c-color-navigation__wrapper").css({
                     'transform': '',
                     'opacity': 1
-
                 });
             }, 300);
         } else {
+            $(".js-c-color-navigation__wrapper").css({
+                'transform': '',
+                'opacity': 1
+            });
             setupNavigationScroll();
         }
 
 
         function setupNavigationScroll() {
+
             $(".js-c-color-navigation__scroll-navigation").each(function (index, value) {
                 var navigation = $(value);
                 var target = $('.' + navigation.attr('data-target'));
