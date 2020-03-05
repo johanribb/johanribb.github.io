@@ -1,4 +1,4 @@
-var components = ["base-styles", "header", "product-hero", "text", "static-slider", "video-hero", "color-list", "color-navigation"];
+var components = ["base-styles", "header", "product-hero", "text", "static-slider", "video-hero", "color-list", "color-navigation", "image-text", "video-reveal", "product-scroll-list"];
 
 
 $.each(components, function (index, value) {
