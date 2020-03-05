@@ -1,0 +1,66 @@
+<div class="c-video-hero">
+    <img class="c-video-hero__video" src="https://johanribb.github.io/fargaret/images/video-1.gif">
+    <div class="c-video-hero__content">
+        <h1 class="c-video-hero__header">
+            <span class="c-video-hero__header--bold">Våra
+                nya färger</span>
+            <span class="c-video-hero__header--thin">Kollektionen Jordnära</span></h1>
+    </div>
+</div>
+
+<style>
+    .c-video-hero {
+        position: relative;
+        overflow: hidden;
+        padding-bottom: 100%;
+        /*56.25%;*/
+        z-index: 1;
+    }
+
+    .c-video-hero__video {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        max-width: none;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .c-video-hero__content {
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+        color: white;
+        -webkit-font-smoothing: antialiased;
+
+    }
+
+    .c-video-hero__header {
+        text-align: center;
+        padding: 0 10%;
+    }
+
+    .c-video-hero__header--bold,
+    .c-video-hero__header--thin {
+        display: block;
+    }
+
+    .c-video-hero__header--bold {
+        font-size: 44px;
+        line-height: 46px;
+        margin-bottom: 20px;
+        font-weight: 700;
+    }
+
+    .c-video-hero__header--thin {
+        text-transform: uppercase;
+        font-size: 14px;
+        line-height: 14px;
+        letter-spacing: 1.4px;
+        font-weight: 200;
+    }
+</style>

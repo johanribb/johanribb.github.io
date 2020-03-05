@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+    <label onclick="init();">start</label>
+    <label onclick="play(0);">kick</label>
+    <label onclick="play(1);">snare</label>
+    <label onclick="play(2);">hihat</label>
+
+
+    // [0] [1] [2] [3] [0] [1] [2] [3] [0] [1] [2] [3] [0] [1] [2] [3]
+
+    <script>
+
+
+
+        var bpm = 120.0;
+
+        var patternPositionInterval = (60.0 / bpm) * 250;
+        var patternPosition = -1;
+
+        var instrument = { "name": "bd", pattern: [0, 0, 0, 0] };
+
+
+        var pattern = [1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0];
+
+        setInterval(function () {
+
+            patternPosition++;
+            if (patternPosition >= 16) {
+                patternPosition = 0;
+            }
+
+            if (pattern[patternPosition] != 0) {
+                console.log('play');
+            }
+
+
+
+            console.log(patternPosition);
+
+
+
+
+        }, patternPositionInterval);
+
+        console.log(interval);
+
+
+        var pattern = [];
+
+
+
+
+        var samples = new Array();
+        var context;
+
+        function init() {
+
+
+            context = new AudioContext();
+            load("bd01", context, function (buffer) { samples[0] = buffer; });
+            load("sd01", context, function (buffer) { samples[1] = buffer; });
+            load("hh03", context, function (buffer) { samples[2] = buffer; });
+
+
+        }
+
+        function play(index) {
+
+
+
+            setInterval(function () {
+                var source = context.createBufferSource();
+                source.buffer = samples[index];
+                source.connect(context.destination);
+                source.start(0);
+
+
+            }, interval);
+
+
+            console.log('play');
+
+
+        }
+
+
+
+        function load(name, context, completed) {
+            var request = new XMLHttpRequest();
+            request.open('GET', 'vermona/cw_vermona_drm1_mk3_' + name + '.wav', true);
+            request.responseType = "arraybuffer";
+
+            request.onload = function () {
+                console.log('load');
+
+
+                context.decodeAudioData(request.response, function (buffer) {
+                    completed(buffer);
+                });
+            }
+            request.send();
+
+        }
+    </script>
+</body>
+
+</html>

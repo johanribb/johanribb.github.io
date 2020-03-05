@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+
+    <div class="drop-down">
+        <button v-on:click="buttonClicked">button</button>
+    </div>
+
+    <div class="drop-down">
+        <button v-on:click="buttonClicked">button</button>
+    </div>
+
+
+    <script>
+        var app = new Vue(
+            {
+                el: ".drop-down",
+                data: {
+                    message: "test" + new Date().toLocaleString(),
+                    style: "display: none;"
+                },
+                methods: {
+                    buttonClicked: function () {
+                        alert('test');
+                    }
+                }
+            });
+
+    </script>
+</body>
+
+</html>

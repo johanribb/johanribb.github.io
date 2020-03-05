@@ -1,0 +1,196 @@
+<div class="product-hero">
+    <div class="product-hero__image"></div>
+    <div class="product-hero__overlay">
+        <div class="product-hero__overlay-container">
+            <div class="section-wrapper">
+                <h1 class="product-hero__header">{header}<span class="product-hero__header-key">{header-key}</span>
+                </h1>
+                <p class="product-hero__preamble">{preamble}</p>
+            </div>
+        </div>
+    </div>
+
+    <div style="background-color: {expander-color};" class="product-hero__expander">
+        <div class="product-hero__expander-content">
+            <div class="product-hero__expander-content-wrapper">
+                <div class="product-hero__expander-row">
+                    <label>Handtag</label>
+                    <a href="#">Grimlund 2A Vit</a>
+                </div>
+                <div class="product-hero__expander-row">
+                    <label>Knopp</label>
+                    <a href="#">Grimlund 7B Vit</a>
+                </div>
+                <div class="product-hero__expander-row">
+                    <label>Lucka</label>
+                    <a href="#">Lindö</a>
+                </div>
+            </div>
+        </div>
+        <button onclick="toggleProductHeroExpander(this); return false;" class="product-hero__button">Produkter i
+            bilden<span class="product-hero__button-icon-add"></span></button>
+    </div>
+</div>
+
+
+<style>
+    .product-hero {
+        position: relative;
+        padding-bottom: 44%;
+        background-color: #aaa;
+    }
+
+    .product-hero__image,
+    .product-hero__overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
+    .product-hero__image {
+        background-size: cover;
+        background-image: url(images/{image});
+    }
+
+    .product-hero__overlay {
+        padding-bottom: 90px;
+        display: flex;
+        align-items: flex-end;
+        color: white;
+    }
+
+    .product-hero__overlay-container {
+        width: 100%;
+    }
+
+    .product-hero__header {
+        font-size: 42px;
+        font-weight: 700;
+        letter-spacing: -0.47px;
+        line-height: 76px;
+
+    }
+
+    .product-hero__header-key {
+        font-size: 99px;
+        letter-spacing: -1.11px;
+        display: block;
+        line-height: 99px;
+    }
+
+    .product-hero__preamble {
+        font-size: 17px;
+        letter-spacing: 1.7px;
+        line-height: 22px;
+        text-transform: uppercase;
+        font-weight: 300;
+        margin-top: 16px;
+        margin-left: 5px;
+    }
+
+
+    .product-hero__expander {
+        position: absolute;
+        right: 16px;
+        bottom: 16px;
+        border-radius: 4px;
+        text-align: right;
+    }
+
+
+
+    .product-hero__expander-content-wrapper {
+        padding: 22px 22px 12px 22px;
+        font-size: 14px;
+    }
+
+    .product-hero__expander-content-wrapper,
+    .product-hero__expander-content-wrapper a {
+        color: white;
+    }
+
+    .product-hero__expander-row {
+        margin-bottom: 12px;
+    }
+
+    .product-hero__expander-content-wrapper a {
+        text-decoration: underline;
+        display: inline-block;
+        min-width: 120px;
+    }
+
+    .product-hero__expander-content-wrapper label {
+        display: inline-block;
+        min-width: 180px;
+        text-align: left;
+    }
+
+    .product-hero__button {
+        display: inline-block;
+        padding: 12px 18px 12px 22px;
+        border-radius: 4px;
+        border: none;
+        color: white;
+        font-size: 14px;
+        line-height: 14px;
+        outline: none;
+        cursor: pointer;
+        background-color: transparent;
+    }
+
+    .product-hero__button-icon-add {
+        position: relative;
+        top: 1px;
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        margin-left: 14px;
+        transform-origin: center;
+        transition: transform 0.5s ease;
+    }
+
+    .product-hero__button-icon-add::before,
+    .product-hero__button-icon-add::after {
+        content: "";
+        display: block;
+        position: absolute;
+        height: 10px;
+        width: 1px;
+        background: white;
+        left: calc(50% - 1px);
+        border-radius: 1px;
+    }
+
+    .product-hero__button-icon-add::after {
+        transform: rotateZ(90deg);
+    }
+
+    .product-hero__expander--visible .product-hero__button-icon-add {
+        transform: rotateZ(135deg);
+    }
+
+    .product-hero__expander-content {
+        height: 0;
+        width: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: opacity 0.5s ease;
+    }
+
+    .product-hero__expander--visible .product-hero__expander-content {
+        width: auto;
+        height: auto;
+        opacity: 1;
+    }
+</style>
+
+<script>
+    function toggleProductHeroExpander(sender) {
+
+        var expander = $(sender).closest('.product-hero__expander');
+        expander.toggleClass('product-hero__expander--visible');
+
+
+
+    }
+</script>

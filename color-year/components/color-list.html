@@ -1,0 +1,189 @@
+<div id="color-sections" class="c-color-sections">
+
+    <div class="c-color-section">
+        <div style="background-image: url('https://johanribb.github.io/fargaret/images/tall-bild.jpg')"
+            class="c-color-section__image"></div>
+        <div class="c-color-section__content">
+            <h2 class="c-color-section__header">Tall</h2>
+            <p class="c-color-section__label">NCS S 7005-Y20R</p>
+            <a class="c-color-section__cta" href="#">Upplev tall</a>
+        </div>
+    </div>
+
+    <div class="c-color-section">
+        <div style="background-image: url('https://johanribb.github.io/fargaret/images/sand-bild.jpg')"
+            class="c-color-section__image"></div>
+        <div class="c-color-section__content">
+            <h2 class="c-color-section__header">Sand</h2>
+            <p class="c-color-section__label">NCS S 7005-Y20R</p>
+            <a class="c-color-section__cta" href="#">Upplev sand</a>
+        </div>
+    </div>
+
+    <div class="c-color-section">
+        <div style="background-image: url('https://johanribb.github.io/fargaret/images/bark-bild.jpg')"
+            class="c-color-section__image"></div>
+        <div class="c-color-section__content">
+            <h2 class="c-color-section__header">Bark</h2>
+            <p class="c-color-section__label">NCS S 7005-Y20R</p>
+            <a class="c-color-section__cta" href="#">Upplev bark</a>
+        </div>
+    </div>
+
+</div>
+<!--
+<div class="debug"></div>
+-->
+
+<style>
+    .debug {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 80px;
+        background-color: red;
+        z-index: 100;
+    }
+
+    .c-color-section {
+        height: 100vh;
+        color: white;
+        text-align: center;
+        position: relative;
+    }
+
+    .c-color-section__content {
+        width: 100%;
+        top: 50%;
+        transform: translateY(0%);
+        /*transform: translateY(-50%);*/
+        position: absolute;
+        opacity: 1;
+        transition: opacity 2s ease;
+    }
+
+    .c-color-section__image {
+        pointer-events: none;
+        top: 0;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        background-position: center center;
+        background-size: cover;
+        opacity: 0;
+        transition: opacity 0.6s linear;
+    }
+
+    .c-color-section--in-view .c-color-section__image {
+        opacity: 1;
+
+    }
+
+    .c-color-section--in-view .c-color-section__content {
+        opacity: 1;
+    }
+
+
+    .c-color-section__header {
+        font-size: 64px;
+        line-height: 77px;
+        font-weight: 700;
+    }
+
+    .c-color-section__label {
+        font-size: 15px;
+        line-height: 18px;
+        letter-spacing: 1.5px;
+        font-weight: 400;
+    }
+
+    .c-color-section__cta {
+        display: inline-block;
+        border: 1px solid white;
+        text-transform: uppercase;
+        color: inherit;
+        padding: 15px 48px;
+        font-size: 13px;
+        border-radius: 4px;
+        margin: 0 auto;
+        -webkit-font-smoothing: antialiased;
+        margin-top: 38px;
+        letter-spacing: 1.4px;
+        text-decoration: none;
+    }
+</style>
+
+<script>
+    $(function () {
+
+        $(window).resize(function () {
+            updateColorSectionHeights();
+        });
+        updateColorSectionHeights();
+
+        $(window).scroll(function () {
+            updateColorSections();
+        });
+        updateColorSections();
+    });
+
+    function updateColorSectionHeights() {
+        $('.c-color-section').css('height', $(window).height());
+    }
+
+    function updateColorSections() {
+
+        var debug = "";
+
+        var sections = $('#color-sections');
+
+
+        var windowHeight = $(window).height();
+
+        debug += 'windowHeight:' + windowHeight;
+
+
+
+        var maxInView = 0;
+        var maxElement = null;
+        var factor = 0;
+        var maxElementTop = 0;
+
+
+
+        $.each(sections.children(), function (index, section) {
+
+            var section = $(section);
+
+            var rect = section[0].getBoundingClientRect();
+            var elementHeight = section.outerHeight();
+
+            var visible = Math.max(0, rect.top > 0 ? Math.min(elementHeight, windowHeight - rect.top) : Math
+                .min(rect
+                    .bottom, windowHeight));
+
+            if (visible >= maxInView) {
+                maxInView = visible;
+                maxElement = section;
+                factor = visible / elementHeight;
+                maxElementTop = rect.top;
+            }
+        });
+
+
+        sections.children().each(function (index, value) {
+            if (value != maxElement[0]) {
+                $(value).removeClass('c-color-section--in-view');
+            }
+        });
+
+        maxElement.addClass('c-color-section--in-view');
+
+        var scaleFactor = maxElementTop > 0 ? factor : (1 + (1 - factor));
+
+        var scale = 1 + (scaleFactor / 10);
+
+        maxElement.find('.c-color-section__image').css('transform', 'scale3d(' + scale + ', ' + scale + ', 1)');
+    }
+</script>

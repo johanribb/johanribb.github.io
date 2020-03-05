@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+
+<body>
+
+    <div ng-app="playback" ng-controller="playbackController">
+
+        <div class="c-track" ng-repeat="track in tracks">
+            <div class="c-track__step" ng-repeat="note in track.notes">
+                <button class="c-track__step-button" ng-class="{'c-track__step-button--active' : note.active }"
+                    ng-click="note.active = !note.active"></button>
+            </div>
+            <input type="range" min="-1.0" max="1.0" step="0.01" ng-model="track.mixer.panning">
+            <input type="range" min="0.0" max="1.0" step="0.01" ng-model="track.mixer.volume">
+            {{track.name}}
+        </div>
+
+        <div class="c-timeline">
+            <span class="c-timeline__marker" ng-class="{'c-timeline__marker--current': $index == timeline.position }"
+                ng-repeat="n in [].constructor(timeline.length) track by $index">
+            </span>
+
+        </div>
+
+        <button class="" ng-class="{'true': timeline.playing == true }" ng-click="toggle();">
+            {{ timeline.playing ? "stop" : "play"}}
+        </button>
+
+
+
+    </div>
+    <style>
+        .c-track {
+            display: flex;
+        }
+
+        .c-timeline__marker {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            background: #eee;
+            border-radius: 8px;
+            margin-right: 4px;
+            margin-top: 4px;
+        }
+
+        .c-timeline__marker--current {
+            background: #000;
+        }
+
+        .c-track__step-button {
+            display: inline-block;
+            -webkit-appearance: none;
+            outline: none !important;
+            width: 16px;
+            height: 16px;
+            margin-right: 4px;
+
+        }
+
+        .c-track__step:nth-child(4n + 1) {
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        .c-track__step-button--active {
+            background: #666;
+
+        }
+    </style>
+    <script>
+
+
+        var app = angular.module("playback", []);
+
+        app.controller("playbackController", ['$scope', '$interval', function ($scope, $interval) {
+            $scope.tracks = [new Track("bd01", "Kick"), new Track("clap04", "Clap"), new Track("hh02", "Hihat"), new Track("hh10", "Open Hihat")];
+            $scope.timeline = { playing: false, bpm: 120, length: 8, position: -1 };
+            $scope.inited = false;
+            $scope.audioContext = null;
+
+            $scope.toggle = function () {
+                if (!$scope.inited) {
+                    $scope.inited = true;
+                    $scope.audioContext = new AudioContext();
+                    init($scope.audioContext, $scope.tracks);
+                }
+                $scope.timeline.playing = !$scope.timeline.playing
+            }
+
+            $interval(function () {
+
+
+
+                if ($scope.timeline.playing) {
+
+                    $scope.timeline.position++;
+
+                    if ($scope.timeline.position >= $scope.timeline.length) {
+                        $scope.timeline.position = 0;
+                    }
+
+                    for (var i = 0; i < $scope.tracks.length; i++) {
+                        if ($scope.audioContext) {
+                            $scope.tracks[i].play($scope.audioContext, $scope.timeline.position);
+                        }
+                    }
+
+                }
+
+
+            }, (60.0 / $scope.timeline.bpm) * 250);
+        }]);
+
+
+        class Track {
+            constructor(sample, name) {
+                this.sample = sample;
+                this.name = name;
+                this.buffer = null;
+                this.offset = 0;
+                this.mixer = new Mixer();
+                this.notes = [new Note(), new Note(), new Note(), new Note(), new Note(), new Note(), new Note(), new Note(), new Note(), new Note(), new Note(), new Note(), new Note(), new Note(), new Note(), new Note()];
+            }
+
+            play(context, position) {
+                if (this.buffer, this.notes[position].active) {
+                    var source = context.createBufferSource();
+                    source.buffer = this.buffer;
+
+                    if (this.mixer.panNode == null) {
+                        this.mixer.panNode = context.createStereoPanner();
+                        this.mixer.panNode.connect(context.destination);
+                    }
+
+                    if (this.mixer.gainNode == null) {
+                        this.mixer.gainNode = context.createGain();
+                        this.mixer.gainNode.connect(this.mixer.panNode);
+                    }
+                    this.mixer.panNode.pan.value = this.mixer.panning;
+                    this.mixer.gainNode.gain.value = this.mixer.volume;
+                    source.connect(this.mixer.gainNode);
+                    source.start(0);
+                }
+            }
+        }
+
+        class Note {
+            constructor() {
+                this.active = false;
+                this.offset = 0;
+            }
+        }
+
+        class Mixer {
+
+            constructor() {
+                this.volume = 1;
+                this.panning = 0;
+
+                this.lowCut = -1;
+                this.highCut = -1;
+
+                this.gainNode = null;
+                this.panNode = null;
+            }
+        }
+
+        function init(audioContext, tracks) {
+            for (var i = 0; i < tracks.length; i++) {
+                load(tracks[i], audioContext);
+
+
+
+            }
+
+        }
+
+        function load(track, context) {
+            var request = new XMLHttpRequest();
+            request.open('GET', 'vermona/cw_vermona_drm1_mk3_' + track.sample + '.wav', true);
+            request.responseType = "arraybuffer";
+
+            request.onload = function () {
+                console.log('load');
+
+                context.decodeAudioData(request.response, function (buffer) {
+                    track.buffer = buffer;
+                });
+            }
+            request.send();
+
+        }
+    </script>
+</body>
+
+</html>
