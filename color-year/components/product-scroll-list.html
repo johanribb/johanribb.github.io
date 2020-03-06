@@ -1,20 +1,51 @@
 <div class="section-wrapper">
 
     <div class="product-scroll-list">
-        <h2>Våra luckor i tall</h2>
-
-
-
+        <h2 class="product-scroll-list__header">Våra luckor i tall</h2>
         <div class="product-scroll-list-wrapper">
-
-
 
             <div class="product-scroll-list__item">
                 <div class="product-scroll-list__image-container">
                     <img src="images/product-details-1-scroll-4.jpg">
                 </div>
                 <h3>Arkitekt Plus Tall</h3>
-                <p>Vitmålad ramlucka av MDF. Vitrinlucka med klart eller frostat glas alt krysspröjs. </p>
+                <p>Vitmålad ramlucka av MDF. Vitrinlucka med klart eller frostat glas alt krysspröjs.</p>
+            </div>
+
+            <div class="product-scroll-list__item">
+                <div class="product-scroll-list__image-container">
+                    <img src="images/product-details-1-scroll-4.jpg">
+                </div>
+                <h3>Lindö tall</h3>
+                <p>Lucka med klart eller frostat glas alt krysspröjs. Vitmålad ramlucka av MDF Vitrin.</p>
+
+            </div>
+
+            <div class="product-scroll-list__item">
+                <div class="product-scroll-list__image-container">
+                    <img src="images/product-details-1-scroll-4.jpg">
+                </div>
+                <h3>Lindö tall</h3>
+                <p>Lucka med klart eller frostat glas alt krysspröjs. Vitmålad ramlucka av MDF Vitrin.</p>
+
+            </div>
+
+            <div class="product-scroll-list__item">
+                <div class="product-scroll-list__image-container">
+                    <img src="images/product-details-1-scroll-4.jpg">
+                </div>
+                <h3>Lindö tall</h3>
+                <p>Lucka med klart eller frostat glas alt krysspröjs. Vitmålad ramlucka av MDF Vitrin.</p>
+
+            </div>
+
+            <div class="product-scroll-list__item">
+                <div class="product-scroll-list__image-container">
+                    <img src="images/product-details-1-scroll-4.jpg">
+                </div>
+                <h3>Lindö tall</h3>
+                <p>Lucka med klart eller frostat glas alt krysspröjs. Vitmålad ramlucka av MDF Vitrin.</p>
+
             </div>
 
             <div class="product-scroll-list__item">
@@ -35,31 +66,12 @@
                 </div>
             </div>
 
-            <div class="product-scroll-list__item">
-                <div class="product-scroll-list__image-container">
-                    <img src="images/product-details-1-scroll-4.jpg">
-                </div>
-            </div>
-
-            <div class="product-scroll-list__item">
-                <div class="product-scroll-list__image-container">
-                    <img src="images/product-details-1-scroll-4.jpg">
-                </div>
-            </div>
-
-            <div class="product-scroll-list__item">
-                <div class="product-scroll-list__image-container">
-                    <img src="images/product-details-1-scroll-4.jpg">
-                </div>
-            </div>
-
-            <div class="product-scroll-list__item">
-                <div class="product-scroll-list__image-container">
-                    <img src="images/product-details-1-scroll-4.jpg">
-                </div>
-            </div>
 
 
+
+        </div>
+        <div class="product-scroll-list__navigate">
+            <div class="product-scroll-list__navigate-button"></div>
         </div>
 
     </div>
@@ -68,16 +80,30 @@
 <script>
     $(function () {
 
-        var scrollList = $('.product-scroll-list-wrapper');
-        var parent = scrollList.parent();
+        function initScrollList() {
+            var scrollList = $('.product-scroll-list-wrapper');
+            var parent = scrollList.parent();
 
-        scrollList.css('padding-left', parent.offset().left + 'px');
+            scrollList.css('padding-left', parent.offset().left + 'px');
+            parent.css('height', scrollList.height() + $('.product-scroll-list__header').outerHeight() + 20);
+        }
+
+        $(window).resize(function () {
+            initScrollList();
+        });
+
+        setTimeout(function () {
+            initScrollList();
+        }, 100);
+
+
 
     })
 
 </script>
 <style>
     .product-scroll-list {
+        margin-bottom: 127px;
         width: 100%;
 
     }
@@ -92,19 +118,17 @@
 
 
     .product-scroll-list-wrapper {
+        display: flex;
         left: 0;
         right: 0;
         position: absolute;
-        white-space: nowrap;
         overflow-y: scroll;
-
     }
 
     .product-scroll-list__item {
-        display: inline-block;
-
-
-        width: 23.652%;
+        /*display: inline-block;*/
+        /*width: 23.652%;*/
+        min-width: 263px;
         margin-right: 22px;
     }
 
@@ -112,6 +136,7 @@
         background: #E5E5E5;
         padding-bottom: 131.94%;
         position: relative;
+        margin-bottom: 12px;
 
     }
 
@@ -122,5 +147,53 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+    }
+
+    .product-scroll-list__item h3 {
+        font-size: 16px;
+        line-height: 22px;
+        font-weight: 400;
+        letter-spacing: 1px;
+        color: #666;
+        margin: 0 0 7px 0;
+        text-transform: uppercase;
+    }
+
+    .product-scroll-list__item p {
+        color: #666;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 300;
+        opacity: 0.5;
+
+    }
+
+    .product-scroll-list__navigate {
+        position: relative;
+        top: 29%;
+    }
+
+    .product-scroll-list__navigate-button {
+        position: absolute;
+        width: 64px;
+        height: 64px;
+        background: white;
+        right: -47px;
+        top: 50%;
+        border-radius: 4px;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
+    }
+
+    .product-scroll-list__navigate-button::after {
+        content: "";
+        display: block;
+        background-image: url(images/arrow-right.svg);
+        width: 11px;
+        height: 16px;
+        background-size: contain;
+        position: absolute;
+        left: calc(50% - 4px);
+        top: calc(50% - 8px);
+
     }
 </style>
