@@ -9,6 +9,12 @@
         max-width: calc(1112px + 120px);
     }
 
+    @media(max-width: 720px) {
+        .section-wrapper {
+            padding: 0 20px;
+        }
+    }
+
     .color-year__columns {
         display: flex;
         flex-wrap: wrap;
@@ -28,5 +34,12 @@
     .color-year__column--vertical-center {
         margin-top: auto;
         margin-bottom: auto;
+    }
+
+    @media (max-width: 720px) {
+        .color-year__column:not(.color-year__column--sm) {
+            width: 100%;
+            padding-right: 0 !important;
+        }
     }
 </style>

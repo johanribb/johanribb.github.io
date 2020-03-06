@@ -20,10 +20,13 @@
     <component data-name="header"></component>
     <component data-name="color-navigation"></component>
     <component
-        data-parameters='{"expander-color": "rgba(129, 131, 116, 0.8)", "image": "product-hero-1.jpg", "header-key": "Tall", "header": "Våra gröna kök i färgen", "preamble": "NCS S8005 - R80B" }'
+        data-parameters='{"expander-color": "rgba(129, 131, 116, 0.8)", "image": "product-hero-1.jpg","image-mobile": "product-hero-1-mobile.jpg", "header-key": "Tall", "header": "Våra gröna kök i färgen", "preamble": "NCS S8005 - R80B" }'
         data-name="product-hero"></component>
-    <component data-name="text"></component>
+
+    <component data-name="product-description"></component>
+
     <component data-name="image-text"></component>
+
     <component data-name="video-reveal"></component>
 
     <component data-name="product-scroll-list"></component>
@@ -65,6 +68,12 @@
 
         .color-navigation-footer .c-color-navigation__description {
             margin-bottom: 38px;
+        }
+
+        @media (max-width: 720px) {
+            .color-navigation-footer h3 {
+                margin: 0px 0 24px 0;
+            }
         }
     </style>
 

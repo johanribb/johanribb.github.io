@@ -12,25 +12,25 @@
                 <div class="color-year__column">
                     <div class="color-swoosh__color-fact">
                         <div class="color-year__columns">
-                            <div class="color-year__column">
+                            <div class="color-year__column color-year__column--sm">
 
                                 <label>Ncs</label>
                                 <p>S8005 - R80B</p>
 
                             </div>
-                            <div class="color-year__column">
+                            <div class="color-year__column color-year__column--sm">
 
                                 <label>Garanti</label>
                                 <p>25 år</p>
 
                             </div>
-                            <div class="color-year__column">
+                            <div class="color-year__column color-year__column--sm">
 
                                 <label>Svanenmärkt</label>
                                 <p>Ja</p>
 
                             </div>
-                            <div class="color-year__column">
+                            <div class="color-year__column color-year__column--sm">
 
                                 <label>Vattenbaserad</label>
                                 <p>Ja</p>
@@ -93,5 +93,42 @@
         color: #666;
         font-weight: 400;
         margin: 0 0 30px 0;
+    }
+
+    @media (max-width: 720px) {
+
+        .color-swoosh {
+            margin-bottom: 24px;
+        }
+
+        .color-swoosh__image-container {
+            position: absolute;
+            left: 0;
+            right: 0;
+            width: 100vw;
+            overflow: hidden;
+        }
+
+        .color-swoosh img {
+            width: auto;
+            left: -386px;
+            height: 308px;
+        }
+
+        .color-swoosh__content {
+            position: relative;
+            padding-top: 300px;
+        }
+
+        .color-swoosh h2 {
+            font-size: 25px;
+            line-height: 32px;
+            max-width: none;
+        }
+
+        .color-swoosh__color-fact {
+            margin-top: 45px;
+        }
+
     }
 </style>
