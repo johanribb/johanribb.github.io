@@ -1,13 +1,280 @@
 <div class="video-reveal">
+
     <div class="section-wrapper">
-        <img src="images/video-poster-temp.jpg">
+        <div></div>
     </div>
+
+    <div class="video-reveal__image-container">
+
+        <canvas class="video-reveal__canvas"></canvas>
+
+        <div class="video-reveal__content">
+            <h2 class="video-reveal__header">Bjud in naturen</h2>
+            <p class="video-reveal__preamble">En jordnära grön kulör inspirarad av barrens färger istället.</p>
+            <a class="video-reveal__play-button" href="#"><span>Se filmen</span></a>
+        </div>
+
+
+        <div class="video-reveal__borders">
+            <div class="video-reveal__border video-reveal__border--left"></div>
+            <div class="video-reveal__border video-reveal__border--right"></div>
+            <div class="video-reveal__border video-reveal__border--top"></div>
+            <div class="video-reveal__border video-reveal__border--bottom"></div>
+        </div>
+
+
+    </div>
+
+    <div class="video-reveal__spacer"></div>
+
 </div>
+
+<script>
+    setTimeout(function () {
+        $(function () {
+
+            var videoCanvas = $('.video-reveal__canvas');
+            var videoCanvasContext = videoCanvas[0].getContext('2d');
+
+            var imageCount = 20;
+            var images = new Array();
+
+            document.tempimages = images;
+
+
+            for (var i = 0; i < imageCount; i++) {
+
+                var name = i < 10 ? ('0' + i) : i;
+
+                var image = new Image();
+                image.src = 'images/animations/AdobeStock_314364142_Video_HD_Preview_000' + name + '.jpg';
+                //image.src = 'images/animations/temp.jpg';
+
+                image.dataIndex = i;
+
+                image.onload = function () {
+                    images[this.dataIndex] = this;
+                    console.log('data index');
+
+                    console.log(images[this.dataIndex].dataIndex);
+                };
+            }
+
+            $(window).scroll(function () { updateVideoReveal(false); });
+
+            $(window).resize(function () { updateVideoReveal(true); });
+
+            updateVideoReveal(true);
+
+            function updateVideoReveal(resize) {
+
+                var element = $('.video-reveal');
+
+                if (resize) {
+
+                    var width = element.find('.section-wrapper div').width();
+                    var screenWidth = $(window).width();
+
+                    var border = Math.round((screenWidth - width) / 2);
+
+                    element.find('.video-reveal__border--left, .video-reveal__border--right').css('width', border + 'px');
+                    element.find('.video-reveal__border--top, .video-reveal__border--bottom').css('height', border + 'px');
+
+                    videoCanvas[0].width = videoCanvas.width();
+                    videoCanvas[0].height = videoCanvas.height();
+                }
+
+                var offsetTop = element.offset().top;
+                var scrollTop = $(window).scrollTop();
+
+                var transitionLength = 1000;
+                var transitionStickyLength = transitionLength + 300;
+                element.find('.video-reveal__spacer').css('height', transitionStickyLength + 'px');
+
+                var transitionFactor = (scrollTop - offsetTop) / transitionLength;
+                if (transitionFactor < 0) {
+                    transitionFactor = 0;
+                }
+                else if (transitionFactor > 1) {
+                    transitionFactor = 1;
+                }
+                var transitionFactorInverted = 1 - transitionFactor;
+
+                element.find('.video-reveal__border--left, .video-reveal__border--right').css('transform', 'scaleX(' + transitionFactorInverted + ')');
+                element.find('.video-reveal__border--top, .video-reveal__border--bottom').css('transform', 'scaleY(' + transitionFactorInverted + ')');
+
+                var scale = transitionFactor * 0.2 + 0.8;
+                element.find('.video-reveal__content').css({ 'opacity': transitionFactor, 'transform': 'translate3d(-50%, -50%, 0) scale3d(' + scale + ', ' + scale + ', 1.0)' });
+
+                //Stop motion anmimation
+
+                var index = Math.round(transitionFactor * imageCount);
+
+                if (index < imageCount && images[index]) {
+
+                    var image = images[index];
+
+                    var scalingInfo = scaleCanvasImage(image.naturalWidth, image.naturalHeight, videoCanvas[0].width, videoCanvas[0].height, 0.5, 0.5);
+
+
+                    requestAnimationFrame(function () {
+                        videoCanvasContext.drawImage(image, scalingInfo.offsetLeft, scalingInfo.offsetTop, scalingInfo.width, scalingInfo.height);
+                    });
+
+
+                }
+            }
+
+            function scaleCanvasImage(contentWidth, contentHeight, containerWidth, containerHeight, offsetLeft, offsetTop) {
+                var contentRatio = contentWidth / contentHeight;
+                var containerRatio = containerWidth / containerHeight;
+                var resultHeight;
+                var resultWidth;
+                offsetLeft = typeof offsetLeft === 'undefined' ? 0.5 : offsetLeft;
+                offsetTop = typeof offsetTop === 'undefined' ? 0.5 : offsetTop;
+                if (contentRatio > containerRatio) {
+                    resultHeight = containerHeight;
+                    resultWidth = containerHeight * contentRatio;
+                }
+                else {
+                    resultWidth = containerWidth;
+                    resultHeight = containerWidth / contentRatio;
+                }
+                return {
+                    width: resultWidth,
+                    height: resultHeight,
+                    offsetLeft: (containerWidth - resultWidth) * offsetLeft,
+                    offsetTop: (containerHeight - resultHeight) * offsetTop
+                };
+            }
+        });
+
+    }, 100);
+</script>
 
 <style>
     .video-reveal {
-        margin-bottom: 114px;
+        position: relative;
+        z-index: 100;
+        margin-bottom: 120px;
     }
+
+    .video-reveal__image-container {
+        background-image: url(images/animations/AdobeStock_314364142_Video_HD_Preview_00000.jpg);
+        background-position: center center;
+        background-size: cover;
+        height: 100vh;
+        position: sticky;
+        position: -webkit-sticky;
+        top: 0;
+    }
+
+    .video-reveal__canvas {
+        width: 100%;
+        height: 100%;
+    }
+
+    .video-reveal__borders {
+        position: absolute;
+        pointer-events: none;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .video-reveal__border {
+        background: white;
+        position: absolute;
+        /*transition: transform 0.2s ease-out;*/
+        will-change: transform;
+    }
+
+    .video-reveal__border--left,
+    .video-reveal__border--right {
+        top: 0;
+        height: 100%;
+    }
+
+    .video-reveal__border--left {
+        transform-origin: left;
+        left: 0;
+    }
+
+    .video-reveal__border--right {
+        transform-origin: right;
+        right: 0;
+    }
+
+    .video-reveal__border--top,
+    .video-reveal__border--bottom {
+        left: 0;
+        height: 120px;
+        width: 100%;
+    }
+
+    .video-reveal__border--top {
+        transform-origin: top;
+        top: 0;
+    }
+
+    .video-reveal__border--bottom {
+        transform-origin: bottom;
+        bottom: 0;
+    }
+
+    .video-reveal__spacer {
+        height: 180vh;
+    }
+
+    .video-reveal__content {
+        position: absolute;
+        color: white;
+        text-align: center;
+        width: 100%;
+        left: 50%;
+        top: 50%;
+        transform: translate3d(-50%, -50%, 0);
+        max-width: 430px;
+        transition: opacity 0.01s linear;
+        opacity: 0;
+    }
+
+    .video-reveal__header {
+        font-size: 59px;
+        line-height: 66px;
+        font-weight: 700;
+        letter-spacing: 0;
+        margin: 0 0 28px 0;
+
+    }
+
+    .video-reveal__preamble {
+        font-size: 20px;
+        line-height: 31px;
+        letter-spacing: 0.56px;
+        font-weight: 300;
+        margin: 0 0 40px 0;
+    }
+
+    .video-reveal__play-button {
+        color: white;
+        font-size: 16px;
+        font-weight: 700;
+        display: inline-flex;
+        align-items: center;
+    }
+
+    .video-reveal__play-button::before {
+        margin-right: 12px;
+        content: "";
+        display: inline-block;
+        width: 36px;
+        height: 36px;
+        background-image: url(images/video-play.svg);
+    }
+
+
 
     @media (max-width: 720px) {
         .video-reveal {
@@ -20,10 +287,22 @@
             height: 70vh;
         }
 
-        .video-reveal img {
-            height: 100%;
-            object-fit: cover;
+        .video-reveal__content {
+            max-width: 360px;
+            padding: 0 20px;
         }
+
+        .video-reveal__header {
+            font-size: 52px;
+            line-height: 52px;
+        }
+
+        .video-reveal__preamble {
+            font-size: 20px;
+            line-height: 31px;
+            margin: 0 0 38px 0;
+        }
+
 
     }
 </style>
