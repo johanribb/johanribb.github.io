@@ -1,39 +1,32 @@
 <div id="color-sections" class="c-color-sections">
 
-    <div class="c-color-section">
-        <div style="background-image: url('https://johanribb.github.io/fargaret/images/tall-bild.jpg')"
-            class="c-color-section__image"></div>
-        <div class="c-color-section__content">
-            <h2 class="c-color-section__header">Tall</h2>
-            <p class="c-color-section__label">NCS S 7005-Y20R</p>
-            <a class="c-color-section__cta" href="#">Upplev tall</a>
-        </div>
-    </div>
+    <colors>
+        <div class="c-color-section">
 
-    <div class="c-color-section">
-        <div style="background-image: url('https://johanribb.github.io/fargaret/images/sand-bild.jpg')"
-            class="c-color-section__image"></div>
-        <div class="c-color-section__content">
-            <h2 class="c-color-section__header">Sand</h2>
-            <p class="c-color-section__label">NCS S 7005-Y20R</p>
-            <a class="c-color-section__cta" href="#">Upplev sand</a>
-        </div>
-    </div>
+            <picture class="c-color-section__image">
 
-    <div class="c-color-section">
-        <div style="background-image: url('https://johanribb.github.io/fargaret/images/bark-bild.jpg')"
-            class="c-color-section__image"></div>
-        <div class="c-color-section__content">
-            <h2 class="c-color-section__header">Bark</h2>
-            <p class="c-color-section__label">NCS S 7005-Y20R</p>
-            <a class="c-color-section__cta" href="#">Upplev bark</a>
+                <source media="(max-width: 720px)" srcset="{image-mobile}">
+
+
+                <img src="{image}" alt="{header}">
+
+            </picture>
+
+            <!--<img src="{image}" class="c-color-section__image">-->
+            <div class="c-color-section__content">
+                <p class="c-color-section__label">{label}</p>
+                <h2 class="c-color-section__header">{header}</h2>
+                <p class="c-color-section__preamble">{preamble}</p>
+                <p class="c-color-section__preamble-mobile">{preamble-mobile}</p>
+                <a style="color: {cta-color}; background: {cta-background};" class="c-color-section__cta"
+                    href="{url}">{cta}</a>
+            </div>
         </div>
-    </div>
+    </colors>
+
 
 </div>
-<!--
-<div class="debug"></div>
--->
+
 
 <style>
     .debug {
@@ -55,29 +48,32 @@
 
     .c-color-section__content {
         width: 100%;
+        max-width: 480px;
+        left: 50%;
         top: 50%;
-        transform: translateY(0%);
-        /*transform: translateY(-50%);*/
+        transform: translate3d(-50%, -50%, 0);
         position: absolute;
         opacity: 1;
         transition: opacity 2s ease;
     }
 
+    .c-color-section__image,
+    .c-color-section__image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+        display: block;
+    }
+
     .c-color-section__image {
-        pointer-events: none;
-        top: 0;
-        position: fixed;
-        width: 100vw;
-        height: 100vh;
-        background-position: center center;
-        background-size: cover;
-        opacity: 0;
+        /*opacity: 0;*/
+        opacity: 1;
         transition: opacity 0.6s linear;
     }
 
     .c-color-section--in-view .c-color-section__image {
         opacity: 1;
-
     }
 
     .c-color-section--in-view .c-color-section__content {
@@ -86,35 +82,86 @@
 
 
     .c-color-section__header {
-        font-size: 64px;
-        line-height: 77px;
+        font-size: 84px;
+        line-height: 102px;
         font-weight: 700;
+        letter-spacing: -0.5px;
+        margin: 0 0 24px 0;
     }
 
     .c-color-section__label {
-        font-size: 15px;
-        line-height: 18px;
+        text-transform: uppercase;
+        font-weight: 300;
+        font-size: 18px;
         letter-spacing: 1.5px;
+        line-height: 24px;
+        margin: 0 0 18px 0;
+    }
+
+    .c-color-section__preamble {
+        font-size: 24px;
+        line-height: 33px;
+        letter-spacing: 0;
         font-weight: 400;
+        margin: 0 0 44px 0;
+    }
+
+    .c-color-section__preamble-mobile {
+        display: none;
     }
 
     .c-color-section__cta {
         display: inline-block;
-        border: 1px solid white;
         text-transform: uppercase;
         color: inherit;
-        padding: 15px 48px;
+        padding: 17px 68px;
         font-size: 13px;
+        line-height: 1;
         border-radius: 4px;
         margin: 0 auto;
         -webkit-font-smoothing: antialiased;
-        margin-top: 38px;
-        letter-spacing: 1.4px;
+        letter-spacing: 1.42px;
         text-decoration: none;
+        font-weight: 400;
+        background: #AEA798;
+    }
+
+    @media (max-width: 720px) {
+        .c-color-section__label {
+            display: none;
+        }
+
+        .c-color-section__content {
+            padding: 0 20px;
+            transform: translate3d(-50%, -70%, 0);
+        }
+
+        .c-color-section__header {
+            font-size: 64px;
+            line-height: 72px;
+            margin-bottom: 8px;
+        }
+
+        .c-color-section__preamble {
+            display: none;
+        }
+
+        .c-color-section__preamble-mobile {
+            display: block;
+            font-size: 15px;
+            line-height: 22px;
+            letter-spacing: 1.5px;
+            font-weight: 300;
+            margin-bottom: 80px;
+
+        }
+
+
     }
 </style>
 
 <script>
+    /*
     $(function () {
 
         $(window).resize(function () {
@@ -186,4 +233,5 @@
 
         maxElement.find('.c-color-section__image').css('transform', 'scale3d(' + scale + ', ' + scale + ', 1)');
     }
+    */
 </script>

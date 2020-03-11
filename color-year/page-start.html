@@ -1,0 +1,37 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Marbodal</title>
+    <meta name="description" content="Marbodal färgåret">
+    <link rel="stylesheet" href="styles.css?v=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+</head>
+
+
+<body>
+
+    <script src="scripts.js?v=1.0"></script>
+    <script>
+        var imagePath = "images-products/";
+        var data = { "url": "page-list.html", "image": imagePath + "marbodal-koks-farger.jpg" };
+    </script>
+
+    <div class="color-year-page">
+        <component data-name="header"></component>
+        <component data-name="color-navigation"></component>
+        <component data-name="static-slider">
+            <script>document.write("<data>" + JSON.stringify(data) + "</data>");</script>
+        </component>
+    </div>
+
+
+</body>
+
+</html>

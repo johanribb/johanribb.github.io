@@ -1,71 +1,20 @@
 <div class="section-wrapper">
 
     <div class="product-scroll-list">
-        <h2 class="product-scroll-list__header">Våra luckor i tall</h2>
+        <h2 class="product-scroll-list__header">{header}</h2>
         <div class="product-scroll-list-wrapper">
 
-            <div class="product-scroll-list__item">
-                <div class="product-scroll-list__image-container">
-                    <img src="images/product-details-1-scroll-4.jpg">
-                </div>
-                <h3>Arkitekt Plus Tall</h3>
-                <p>Vitmålad ramlucka av MDF. Vitrinlucka med klart eller frostat glas alt krysspröjs.</p>
-            </div>
+            <products>
 
-            <div class="product-scroll-list__item">
-                <div class="product-scroll-list__image-container">
-                    <img src="images/product-details-1-scroll-4.jpg">
-                </div>
-                <h3>Lindö tall</h3>
-                <p>Lucka med klart eller frostat glas alt krysspröjs. Vitmålad ramlucka av MDF Vitrin.</p>
+                <a class="product-scroll-list__item">
+                    <div class="product-scroll-list__image-container {padded-image}">
+                        <img src="{image}">
+                    </div>
+                    <h3>{name}</h3>
+                    <p>{description}</p>
+                </a>
 
-            </div>
-
-            <div class="product-scroll-list__item">
-                <div class="product-scroll-list__image-container">
-                    <img src="images/product-details-1-scroll-4.jpg">
-                </div>
-                <h3>Lindö tall</h3>
-                <p>Lucka med klart eller frostat glas alt krysspröjs. Vitmålad ramlucka av MDF Vitrin.</p>
-
-            </div>
-
-            <div class="product-scroll-list__item">
-                <div class="product-scroll-list__image-container">
-                    <img src="images/product-details-1-scroll-4.jpg">
-                </div>
-                <h3>Lindö tall</h3>
-                <p>Lucka med klart eller frostat glas alt krysspröjs. Vitmålad ramlucka av MDF Vitrin.</p>
-
-            </div>
-
-            <div class="product-scroll-list__item">
-                <div class="product-scroll-list__image-container">
-                    <img src="images/product-details-1-scroll-4.jpg">
-                </div>
-                <h3>Lindö tall</h3>
-                <p>Lucka med klart eller frostat glas alt krysspröjs. Vitmålad ramlucka av MDF Vitrin.</p>
-
-            </div>
-
-            <div class="product-scroll-list__item">
-                <div class="product-scroll-list__image-container">
-                    <img src="images/product-details-1-scroll-4.jpg">
-                </div>
-            </div>
-
-            <div class="product-scroll-list__item">
-                <div class="product-scroll-list__image-container">
-                    <img src="images/product-details-1-scroll-4.jpg">
-                </div>
-            </div>
-
-            <div class="product-scroll-list__item">
-                <div class="product-scroll-list__image-container">
-                    <img src="images/product-details-1-scroll-4.jpg">
-                </div>
-            </div>
-
+            </products>
 
 
 
@@ -80,12 +29,47 @@
 <script>
     $(function () {
 
+        $('.product-scroll-list__navigate-button').click(function () {
+
+            var width = $('.product-scroll-list-wrapper').width();
+            var paddingLeft = parseInt($('.product-scroll-list-wrapper').css('padding-left').replace('px', ''));
+
+            var scrollList = $('.product-scroll-list-wrapper');
+
+            var itemWidth = $('.product-scroll-list__item').outerWidth();
+
+            var totalItems = $('.product-scroll-list__item').length;
+
+            var totalWidth = totalItems * itemWidth;
+
+
+            var numVisibleItems = Math.floor(width / itemWidth);
+
+            if (totalWidth - (scrollList.scrollLeft() + width) <= 20) {
+                scrollList.animate({ scrollLeft: 0 }, 500);
+            }
+            else {
+                scrollList.animate({ scrollLeft: scrollList.scrollLeft() + (numVisibleItems * itemWidth) }, 700);
+            }
+        });
+
         function initScrollList() {
             var scrollList = $('.product-scroll-list-wrapper');
             var parent = scrollList.parent();
 
             scrollList.css('padding-left', parent.offset().left + 'px');
             parent.css('height', scrollList.height() + $('.product-scroll-list__header').outerHeight() + 20);
+
+
+            var totalWidth = $('.product-scroll-list__item').outerWidth() * $('.product-scroll-list__item').length;
+
+            console.log(totalWidth);
+            if (totalWidth > scrollList.width() && $(window).width() > 720) {
+                $('.product-scroll-list__navigate').show();
+            }
+            else {
+                $('.product-scroll-list__navigate').hide();
+            }
         }
 
         $(window).resize(function () {
@@ -95,8 +79,6 @@
         setTimeout(function () {
             initScrollList();
         }, 100);
-
-
 
     })
 
@@ -122,18 +104,20 @@
         left: 0;
         right: 0;
         position: absolute;
-        overflow-y: scroll;
+        overflow: hidden;
     }
 
     .product-scroll-list__item {
         /*display: inline-block;*/
         /*width: 23.652%;*/
-        min-width: 263px;
-        margin-right: 22px;
+        display: block;
+        min-width: 285px;
+        max-width: 285px;
+        padding-right: 22px;
     }
 
     .product-scroll-list__image-container {
-        background: #E5E5E5;
+        background: #f8f8f8;
         padding-bottom: 131.94%;
         position: relative;
         margin-bottom: 12px;
@@ -147,6 +131,17 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+    }
+
+    .product-scroll-list__image-container.true img {
+        left: 50%;
+        top: 50%;
+        transform: translate3d(-50%, -50%, 0);
+
+        object-fit: initial;
+
+        height: 224px;
+        width: auto;
     }
 
     .product-scroll-list__item h3 {
@@ -181,6 +176,7 @@
         right: -47px;
         top: 50%;
         border-radius: 4px;
+        cursor: pointer;
         box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
     }
 
@@ -199,9 +195,13 @@
 
     @media (max-width: 720px) {
 
+        .product-scroll-list-wrapper {
+            overflow: auto;
+            overflow-y: scroll;
+        }
+
         .product-scroll-list {
             margin-bottom: 81px;
-
         }
 
         .product-scroll-list h2 {

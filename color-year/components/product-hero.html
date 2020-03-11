@@ -13,18 +13,12 @@
     <div style="background-color: {expander-color};" class="product-hero__expander">
         <div class="product-hero__expander-content">
             <div class="product-hero__expander-content-wrapper">
-                <div class="product-hero__expander-row">
-                    <label>Handtag</label>
-                    <a href="#">Grimlund 2A Vit</a>
-                </div>
-                <div class="product-hero__expander-row">
-                    <label>Knopp</label>
-                    <a href="#">Grimlund 7B Vit</a>
-                </div>
-                <div class="product-hero__expander-row">
-                    <label>Lucka</label>
-                    <a href="#">Lindö</a>
-                </div>
+                <products>
+                    <div class="product-hero__expander-row">
+                        <label>{label}</label>
+                        <a href="{url}">{name}</a>
+                    </div>
+                </products>
             </div>
         </div>
         <button onclick="toggleProductHeroExpander(this); return false;" class="product-hero__button">Produkter i
@@ -49,12 +43,12 @@
 
     .product-hero__image {
         background-size: cover;
-        background-image: url(images/{image});
+        background-image: url({image});
     }
 
     @media (max-width: 720px) {
         .product-hero__image {
-            background-image: url(images/{image-mobile});
+            background-image: url({image-mobile});
         }
 
     }
@@ -236,11 +230,7 @@
 
 <script>
     function toggleProductHeroExpander(sender) {
-
         var expander = $(sender).closest('.product-hero__expander');
         expander.toggleClass('product-hero__expander--visible');
-
-
-
     }
 </script>

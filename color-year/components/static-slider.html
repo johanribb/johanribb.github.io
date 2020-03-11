@@ -3,19 +3,19 @@
         <div class="c-static-slider__header-content">
             <h1 class="c-static-slider__header">
                 <span class="c-static-slider__header--bold">Vår nya färgkollektion</span>
-                <span class="c-static-slider__header--thin">"Jordnära"</span></h1>
-            <a class="c-static-slider__cta" href="overview-instagram.html">Se hela kollektionen</a>
+                <span class="c-static-slider__header--thin">Jordnära · 10 färger</span></h1>
+            <a class="c-static-slider__cta" href="{url}">Upplev kollektionen</a>
         </div>
     </div>
 </div>
 
 <style>
     .c-static-slider {
-        height: calc(100vh - 106px);
-        background: black;
+        height: calc(100vh - 170px);
+
         position: relative;
 
-        background-image: url('https://johanribb.github.io/fargaret/images/10-moodboards.jpg');
+        background-image: url('{image}');
         background-size: auto 100%;
         animation-name: animated-background;
         animation-duration: 800s;
@@ -57,6 +57,7 @@
     .c-static-slider__header {
         font-weight: 700;
         text-align: center;
+        margin-bottom: 48px;
     }
 
     .c-static-slider__cta {
@@ -69,11 +70,10 @@
         border-radius: 4px;
         margin: 0 auto;
         -webkit-font-smoothing: antialiased;
-        margin-top: 38px;
-        letter-spacing: 1.4px;
+        letter-spacing: 1.42px;
         text-decoration: none;
         font-weight: 400;
-        transition: color 0.15s ease, background-color 0.15s ease
+        transition: color 0.15s ease, background-color 0.15s ease;
     }
 
     .c-static-slider__cta:hover {
@@ -90,16 +90,17 @@
 
     .c-static-slider__header--thin {
         display: block;
-        font-size: 19px;
-        font-weight: 200;
-
+        font-size: 20px;
+        line-height: 26px;
+        letter-spacing: 0.56px;
+        font-weight: 300;
     }
 
     .c-static-slider__header--bold {
-        font-size: 39px;
-        line-height: 49px;
+        font-size: 49px;
+        line-height: 54px;
         display: block;
-        margin-bottom: 14px;
+        margin: 0 0 26px 0;
     }
 
     @media only screen and (max-width: 720px) {
@@ -109,6 +110,19 @@
 
         .c-static-slider__header-content {
             top: 36%;
+        }
+
+        .c-static-slider__header--bold {
+            font-size: 38px;
+            line-height: 50px;
+
+            margin: 0 0 26px 0;
+        }
+
+        .c-static-slider__header--thin {
+            font-size: 17px;
+            line-height: 22px;
+            letter-spacing: 0;
         }
     }
 </style>

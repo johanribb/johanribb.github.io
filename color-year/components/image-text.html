@@ -1,16 +1,16 @@
 <div class="section-wrapper">
     <div class="image-text">
         <div class="column column__image">
-            <img src="images/product-details-1-1.jpg">
+            <img src="{image}">
         </div>
         <div class="column column__text-content">
             <div class="text-content">
-                <h2>Lindö Tall är senaste tillskottet i familjen gröna kök</h2>
-                <p>Lindö är en klassisk exklusiv spegellucka med brett färgval och många vitrinval. Av alla våra kök är
-                    Lindö det som har mest profilerad ram och spegel.</p>
+                <h2>{header}</h2>
+                <p>{preamble}</p>
                 <div class="link-container">
-                    <a class="link-container__link link-container__link--primary" href="#">Se Lindö Tall</a>
-                    <a class="link-container__link link-container__link--secondary" href="#">Se alla gröna kök ›</a>
+                    <links>
+                        <a class="link-container__link link-container__link--primary" href="{url}">{name}</a>
+                    </links>
                 </div>
             </div>
         </div>
@@ -74,7 +74,7 @@
         color: #003A70;
     }
 
-    .image-text .link-container__link--secondary {
+    .image-text .link-container__link--primary:nth-child(2) {
         color: #666;
     }
 
