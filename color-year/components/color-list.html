@@ -51,6 +51,7 @@
         position: absolute;
         opacity: 1;
         transition: opacity 2s ease;
+        padding-top: 45vh;
     }
 
     .c-color-section__image,
@@ -232,9 +233,9 @@
 
             var scaleFactor = maxElementTop > 0 ? factor : (1 + (1 - factor));
 
-            var scale = 1 + (scaleFactor / 10);
+            var scale = 1 + (scaleFactor / 100);
 
-            //  maxElement.find('.c-color-section__image').css('transform', 'scale3d(' + scale + ', ' + scale + ', 1)');
+            maxElement.find('.c-color-section__image').css('transform', 'scale3d(' + scale + ', ' + scale + ', 1)');
         } else {
             sections.children().each(function (index, value) {
                 $(value).removeClass('c-color-section--in-view');
