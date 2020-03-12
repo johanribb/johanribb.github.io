@@ -1,6 +1,6 @@
 var assetsPath = "images/";
 var imagePath = "images-products/";
-
+var videoPath = "https://marbodal.test.nobiadigital.com/globalassets/fargaret/";
 
 var navigationData = {
     "links": [
@@ -24,6 +24,7 @@ var contactUsData = {
 var pageStartData = { "header": "Vår nya färgkollektion", "preamble": "Jordnära · 10 färger", "button": "Upplev kollektionen", "url": "page-list.html", "image": imagePath + "marbodal-koks-farger.jpg" };
 
 var pageListData = {
+    "video-hero": { "video-url": videoPath + "jordnara.mp4" },
     "description": { "header": "Från de grönaste skogarna till de blåaste haven. Från de granitgrå bergen till de vidsträckta sandstränderna.", "preamble": "Från vintermorgonens frost till sommaråskans mullrande framfart. För att finna det vi sökte letade vi där allt en gång började. I vår natur. Här fann vi vår nya färgkollektion. Vi kallar den Jordnära.", "header-color": "#C3A472" },
     "sections": {
         "colors": [
@@ -180,7 +181,7 @@ var pageDetailsData = {
         "video-reveal": {
             "header": "Bjud in naturen",
             "preamble": "En jordnära grön kulör inspirarad av barrens färger istället.",
-            "video": "videos/tall.mp4",
+            "video": videoPath + "tall.mp4",
             "image-count": "20",
             "image-name": imagePath + "animations/tall_000"
         },
@@ -231,7 +232,7 @@ var pageDetailsData = {
         "video-reveal": {
             "header": "Bjud in naturen",
             "preamble": "En jordnära grön kulör inspirarad av barrens färger istället.",
-            "video": "videos/frost.mp4",
+            "video": videoPath + "frost.mp4",
             "image-count": "20",
             "image-name": imagePath + "animations/frost_000"
         },
