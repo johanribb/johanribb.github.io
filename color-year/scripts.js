@@ -73,7 +73,7 @@ var pageListData = {
                 "cta": "Upplev hav",
                 "cta-color": "white",
                 "cta-background": "#5C656A",
-                "url": getPageUrl("bark")
+                "url": getPageUrl("hav")
             },
             {
                 "header": "Frö",
@@ -85,7 +85,7 @@ var pageListData = {
                 "cta": "Upplev frö",
                 "cta-color": "#715443",
                 "cta-background": "#FFFFFF",
-                "url": getPageUrl("bark")
+                "url": getPageUrl("fro")
             },
             {
                 "header": "Granit",
@@ -97,7 +97,7 @@ var pageListData = {
                 "cta": "Upplev granit",
                 "cta-color": "white",
                 "cta-background": "#2B2C29",
-                "url": getPageUrl("bark")
+                "url": getPageUrl("granit")
             },
             {
                 "header": "Åska",
@@ -109,7 +109,7 @@ var pageListData = {
                 "cta": "Upplev åska",
                 "cta-color": "white",
                 "cta-background": "#A4A4A3",
-                "url": getPageUrl("bark")
+                "url": getPageUrl("aska")
             },
             {
                 "header": "Moln",
@@ -121,7 +121,7 @@ var pageListData = {
                 "cta": "Upplev moln",
                 "cta-color": "white",
                 "cta-background": "#919495",
-                "url": getPageUrl("bark")
+                "url": getPageUrl("moln")
             },
             {
                 "header": "Lin",
@@ -133,7 +133,7 @@ var pageListData = {
                 "cta": "Upplev lin",
                 "cta-color": "white",
                 "cta-background": "#7A7A73",
-                "url": getPageUrl("bark")
+                "url": getPageUrl("lin")
             },
             {
                 "header": "Frost",
@@ -145,7 +145,7 @@ var pageListData = {
                 "cta": "Upplev frost",
                 "cta-color": "#715443",
                 "cta-background": "#FFFFFF",
-                "url": getPageUrl("bark")
+                "url": getPageUrl("frost")
             }
         ]
     }
