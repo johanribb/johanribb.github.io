@@ -17,137 +17,20 @@
 
 <body>
     <script src="scripts.js?v=1.0"></script>
+
     <div class="color-year-page">
 
         <script>
 
             var color = new URLSearchParams(window.location.search).get('color');
-            var imagePath = "images-products/";
-
-            var data = [];
-
-
-            if (color == null || color == "tall") {
-                data["product-hero"] = {
-                    "products":
-                        [{ "label": "Handtag", "name": "Grimlund 2A Vit", "url": "#" },
-                        { "label": "Handtag", "name": "Grimlund 7B Vit", "url": "#" },
-                        { "label": "Lucka", "name": "Lindö", "url": "#" }],
-                    "expander-color": "rgba(129, 131, 116, 0.8)",
-                    "image": imagePath + "tall-hero.jpg",
-                    "image-mobile": imagePath + "tall-hero-mobile.jpg",
-                    "header-key": "Tall", "header":
-                        "Våra gröna kök i färgen",
-                    "preamble": "NCS S8005-R80B &middot; Vattenbaserad"
-                };
-
-                data["product-description"] = {
-                    "header": "Känslan av att kliva ut i en skog är oslagbar.",
-                    "preamble": "Luften fyller lungorna med ny kraft. Det stilla suset av vajande trädtoppar. Skogens dofter och ljud. Vår färg Tall är noga balanserad och utvald för att förmedla den känslan.",
-                    "header-color": "#989A85"
-                };
-
-                data["image-text"] = {
-                    "header": "Lindö Tall är senaste tillskottet i familjen gröna kök",
-                    "preamble": "Lindö är en klassisk exklusiv spegellucka med brett färgval och många vitrinval. Av alla våra kök är Lindö det som har mest profilerad ram och spegel.",
-                    "image": imagePath + "tall-article.jpg",
-                    "links": [{ "name": "Se Lindö Tall", "url": "#" }, { "name": "Se alla gröna kök ›", "url": "#" }]
-                };
-
-                data["video-reveal"] = {
-                    "header": "Bjud in naturen",
-                    "preamble": "En jordnära grön kulör inspirarad av barrens färger istället.",
-                    "video": "videos/tall.mp4",
-                    "image-count": "20",
-                    "image-name": imagePath + "animations/tall_000"
-                };
-
-                data["product-scroll-list"] = {
-                    "header": "Våra luckor i tall",
-                    "products": [
-                        { "name": "Arkitekt Plus Tall", "description": "Vitmålad ramlucka av MDF. Vitrinlucka med klart eller frostat glas alt krysspröjs.", "url": "#", "padded-image": "true", "image": imagePath + "tall-scroll-1.jpg" },
-                        { "name": "Lindö tall", "description": "Lucka med klart eller frostat glas alt krysspröjs. Vitmålad ramlucka av MDF Vitrin.", "url": "#", "padded-image": "true", "image": imagePath + "tall-scroll-2.jpg" },
-                        { "name": "Lindö tall", "description": "Lucka med klart eller frostat glas alt krysspröjs. Vitmålad ramlucka av MDF Vitrin.", "url": "#", "padded-image": "true", "image": imagePath + "tall-scroll-3.jpg" },
-                        { "name": "Lindö tall", "description": "Lucka med klart eller frostat glas alt krysspröjs. Vitmålad ramlucka av MDF Vitrin.", "url": "#", "padded-image": "true", "image": imagePath + "tall-scroll-4.jpg" }
-                    ]
-                };
-
-                data["color-swoosh"] = {
-                    "header": "Färgen Tall är en mellangrön färg med inslag av gula pigment.",
-                    "image": imagePath + "tall-swoosh.jpg",
-                    "columns": [
-                        { "label": "Ncs", "value": "S8005 - R80B" },
-                        { "label": "Garanti", "value": "25 år" },
-                        { "label": "Svanenmärkt", "value": "Ja" },
-                        { "label": "Vattenbaserad", "value": "Ja" }
-                    ]
-                };
+            if (!color) {
+                color = "tall";
             }
 
-            if (color == "frost") {
-                data["product-hero"] = {
-                    "products":
-                        [{ "label": "Handtag", "name": "Grimlund 2A Vit", "url": "#" },
-                        { "label": "Handtag", "name": "Grimlund 7B Vit", "url": "#" },
-                        { "label": "Lucka", "name": "Lindö", "url": "#" }],
-                    "expander-color": "rgba(160, 160, 160, 0.8)",
-                    "image": imagePath + "frost-hero.jpg",
-                    "image-mobile": imagePath + "frost-hero-mobile.jpg",
-                    "header-key": "Frost", "header":
-                        "Våra ljusa kök i färgen",
-                    "preamble": "NCS S8005 - R80B &middot; Vattenbaserad"
-                };
 
-                data["product-description"] = {
-                    "header": "Känslan av att kliva ut i en skog är oslagbar.",
-                    "preamble": "Luften fyller lungorna med ny kraft. Det stilla suset av vajande trädtoppar. Skogens dofter och ljud. Vår färg Tall är noga balanserad och utvald för att förmedla den känslan.",
-                    "header-color": "#a7a7a7"
-                };
 
-                data["image-text"] = {
-                    "header": "Lindö Tall är senaste tillskottet i familjen gröna kök",
-                    "preamble": "Lindö är en klassisk exklusiv spegellucka med brett färgval och många vitrinval. Av alla våra kök är Lindö det som har mest profilerad ram och spegel.",
-                    "image": imagePath + "frost-article.jpg",
-                    "links": [{ "name": "Se Lindö Tall", "url": "#" }, { "name": "Se alla gröna kök ›", "url": "#" }]
-                };
+            var data = pageDetailsData[color];
 
-                data["video-reveal"] = {
-                    "header": "Bjud in naturen",
-                    "preamble": "En jordnära grön kulör inspirarad av barrens färger istället.",
-                    "video": "videos/frost.mp4",
-                    "image-count": "20",
-                    "image-name": imagePath + "animations/frost_000"
-                };
-
-                data["product-scroll-list"] = {
-                    "header": "Våra luckor i tall",
-                    "products": [
-                        { "name": "Arkitekt Plus Tall", "description": "Vitmålad ramlucka av MDF. Vitrinlucka med klart eller frostat glas alt krysspröjs.", "url": "#", "padded-image": "true", "image": imagePath + "frost-scroll-1.jpg" },
-                        { "name": "Lindö tall", "description": "Lucka med klart eller frostat glas alt krysspröjs. Vitmålad ramlucka av MDF Vitrin.", "url": "#", "padded-image": "true", "image": imagePath + "frost-scroll-2.jpg" },
-                        { "name": "Lindö tall", "description": "Lucka med klart eller frostat glas alt krysspröjs. Vitmålad ramlucka av MDF Vitrin.", "url": "#", "padded-image": "true", "image": imagePath + "frost-scroll-3.jpg" },
-                        { "name": "Lindö tall", "description": "Lucka med klart eller frostat glas alt krysspröjs. Vitmålad ramlucka av MDF Vitrin.", "url": "#", "padded-image": "true", "image": imagePath + "frost-scroll-4.jpg" },
-                        { "name": "Lindö tall", "description": "Lucka med klart eller frostat glas alt krysspröjs. Vitmålad ramlucka av MDF Vitrin.", "url": "#", "padded-image": "true", "image": imagePath + "frost-scroll-5.jpg" },
-                        { "name": "Lindö tall", "description": "Lucka med klart eller frostat glas alt krysspröjs. Vitmålad ramlucka av MDF Vitrin.", "url": "#", "padded-image": "true", "image": imagePath + "frost-scroll-6.jpg" },
-                        { "name": "Lindö tall", "description": "Lucka med klart eller frostat glas alt krysspröjs. Vitmålad ramlucka av MDF Vitrin.", "url": "#", "padded-image": "true", "image": imagePath + "frost-scroll-7.jpg" },
-                        { "name": "Lindö tall", "description": "Lucka med klart eller frostat glas alt krysspröjs. Vitmålad ramlucka av MDF Vitrin.", "url": "#", "padded-image": "true", "image": imagePath + "frost-scroll-8.jpg" },
-                        { "name": "Lindö tall", "description": "Lucka med klart eller frostat glas alt krysspröjs. Vitmålad ramlucka av MDF Vitrin.", "url": "#", "padded-image": "true", "image": imagePath + "frost-scroll-9.jpg" },
-                        { "name": "Lindö tall", "description": "Lucka med klart eller frostat glas alt krysspröjs. Vitmålad ramlucka av MDF Vitrin.", "url": "#", "padded-image": "true", "image": imagePath + "frost-scroll-10.jpg" },
-                        { "name": "Lindö tall", "description": "Lucka med klart eller frostat glas alt krysspröjs. Vitmålad ramlucka av MDF Vitrin.", "url": "#", "padded-image": "true", "image": imagePath + "frost-scroll-11.jpg" },
-                        { "name": "Lindö tall", "description": "Lucka med klart eller frostat glas alt krysspröjs. Vitmålad ramlucka av MDF Vitrin.", "url": "#", "padded-image": "true", "image": imagePath + "frost-scroll-12.jpg" }
-                    ]
-                };
-
-                data["color-swoosh"] = {
-                    "header": "Färgen Tall är en mellangrön färg med inslag av gula pigment.",
-                    "image": imagePath + "frost-swoosh.jpg",
-                    "columns": [
-                        { "label": "Ncs", "value": "S8005 - R80B" },
-                        { "label": "Garanti", "value": "25 år" },
-                        { "label": "Svanenmärkt", "value": "Ja" },
-                        { "label": "Vattenbaserad", "value": "Ja" }
-                    ]
-                };
-            }
 
 
         </script>
@@ -156,7 +39,9 @@
 
         <component data-name="header"></component>
 
-        <component data-name="color-navigation"></component>
+        <component data-name="color-navigation">
+            <script>document.write("<data>" + JSON.stringify(navigationData) + "</data>");</script>
+        </component>
 
         <component data-name="product-hero" data-parameters=''>
             <script>document.write("<data>" + JSON.stringify(data["product-hero"]) + "</data>");</script>
@@ -182,7 +67,9 @@
             <script>document.write("<data>" + JSON.stringify(data["color-swoosh"]) + "</data>");</script>
         </component>
 
-        <component data-name="product-contact"></component>
+        <component data-name="product-contact">
+            <script>document.write("<data>" + JSON.stringify(contactUsData) + "</data>");</script>
+        </component>
 
         <div class="color-navigation-footer">
             <h3>utforska Alla färger</h2>

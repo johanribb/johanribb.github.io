@@ -18,16 +18,14 @@
 <body>
 
     <script src="scripts.js?v=1.0"></script>
-    <script>
-        var imagePath = "images-products/";
-        var data = { "url": "page-list.html", "image": imagePath + "marbodal-koks-farger.jpg" };
-    </script>
 
     <div class="color-year-page">
         <component data-name="header"></component>
-        <component data-name="color-navigation"></component>
+        <component data-name="color-navigation">
+            <script>document.write("<data>" + JSON.stringify(navigationData) + "</data>");</script>
+        </component>
         <component data-name="static-slider">
-            <script>document.write("<data>" + JSON.stringify(data) + "</data>");</script>
+            <script>document.write("<data>" + JSON.stringify(pageStartData) + "</data>");</script>
         </component>
     </div>
 

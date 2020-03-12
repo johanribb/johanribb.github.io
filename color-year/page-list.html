@@ -18,46 +18,22 @@
 <body>
     <script src="scripts.js?v=1.0"></script>
 
-    <script>
-        var imagePath = "images-products/";
-
-        var description = {
-            "header": "Från de grönaste skogarna till de blåaste haven. Från de granitgrå bergen till de vidsträckta sandstränderna.", "preamble": "Från vintermorgonens frost till sommaråskans mullrande framfart. För att finna det vi sökte letade vi där allt en gång började. I vår natur. Här fann vi vår nya färgkollektion. Vi kallar den Jordnära.", "header-color": "#C3A472"
-        };
-
-        var data = {
-            "colors": [
-                {
-                    "header": "Tall",
-                    "label": "Vår mörkgröna färg",
-                    "preamble": "Känslan av att kliva ut i en skog är oslagbar.",
-                    "preamble-mobile": "NCS S 7005-Y20R",
-                    "image": imagePath + "list-tall.jpg",
-                    "image-mobile": imagePath + "list-tall-mobile.jpg",
-                    "cta": "Upplev tall",
-                    "cta-color": "white",
-                    "cta-background": "#9A9A8D",
-                    "url": getPageUrl("tall")
-                }
-            ]
-        };
-
-    </script>
-
     <div class="color-year-page">
         <component data-name="base-styles"></component>
         <component data-name="header"></component>
-        <component data-name="color-navigation"></component>
+        <component data-name="color-navigation">
+            <script>document.write("<data>" + JSON.stringify(navigationData) + "</data>");</script>
+        </component>
 
         <component data-name="video-hero"></component>
 
         <component data-name="product-description">
-            <script>document.write("<data>" + JSON.stringify(description) + "</data>");</script>
+            <script>document.write("<data>" + JSON.stringify(pageListData["description"]) + "</data>");</script>
         </component>
 
 
         <component data-name="color-list">
-            <script>document.write("<data>" + JSON.stringify(data) + "</data>");</script>
+            <script>document.write("<data>" + JSON.stringify(pageListData["sections"]) + "</data>");</script>
         </component>
 
     </div>

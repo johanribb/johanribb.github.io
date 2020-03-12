@@ -4,106 +4,17 @@
 <nav class="js-c-color-navigation c-color-navigation">
     <div class="js-c-color-navigation__wrapper c-color-navigation__wrapper">
         <ul class="js-c-color-navigation__items c-color-navigation__items">
-
-            <li class="c-color-navigation__item">
-                <a data-name="tall" href="#" class="c-color-navigation__link">
-                    <figure class="c-color-navigation__image"></figure>
-                    <div class="c-color-navigation__description">
-                        <span class="c-color-navigation__title">Tall</span>
-                        <span class="c-color-navigation__label">Grön</span>
-                    </div>
-                </a>
-            </li>
-
-            <li class="c-color-navigation__item">
-                <a data-name="sand" href="#" class="c-color-navigation__link">
-                    <figure class="c-color-navigation__image"></figure>
-                    <div class="c-color-navigation__description">
-                        <span class="c-color-navigation__title">Sand</span>
-                        <span class="c-color-navigation__label">Beige</span>
-                    </div>
-                </a>
-            </li>
-
-            <li class="c-color-navigation__item">
-                <a data-name="hav" href="#" class="c-color-navigation__link">
-                    <figure class="c-color-navigation__image"></figure>
-                    <div class="c-color-navigation__description">
-                        <span class="c-color-navigation__title">Hav</span>
-                        <span class="c-color-navigation__label">Blå</span>
-                    </div>
-                </a>
-            </li>
-
-            <li class="c-color-navigation__item">
-                <a data-name="aska" href="#" class="c-color-navigation__link">
-                    <figure class="c-color-navigation__image"></figure>
-                    <div class="c-color-navigation__description">
-                        <span class="c-color-navigation__title">Åska</span>
-                        <span class="c-color-navigation__label">Mellangrå</span>
-                    </div>
-                </a>
-            </li>
-
-            <li class="c-color-navigation__item">
-                <a data-name="lin" href="#" class="c-color-navigation__link">
-                    <figure class="c-color-navigation__image"></figure>
-                    <div class="c-color-navigation__description">
-                        <span class="c-color-navigation__title">Lin</span>
-                        <span class="c-color-navigation__label">Ljus</span>
-                    </div>
-                </a>
-            </li>
-
-            <li class="c-color-navigation__item">
-                <a data-name="bark" href="#" class="c-color-navigation__link">
-                    <figure class="c-color-navigation__image"></figure>
-                    <div class="c-color-navigation__description">
-                        <span class="c-color-navigation__title">Bark</span>
-                        <span class="c-color-navigation__label">Brun</span>
-                    </div>
-                </a>
-            </li>
-
-            <li class="c-color-navigation__item">
-                <a data-name="moln" href="#" class="c-color-navigation__link">
-                    <figure class="c-color-navigation__image"></figure>
-                    <div class="c-color-navigation__description">
-                        <span class="c-color-navigation__title">Moln</span>
-                        <span class="c-color-navigation__label">Ljusgrå</span>
-                    </div>
-                </a>
-            </li>
-
-            <li class="c-color-navigation__item">
-                <a data-name="frost" href="#" class="c-color-navigation__link">
-                    <figure class="c-color-navigation__image"></figure>
-                    <div class="c-color-navigation__description">
-                        <span class="c-color-navigation__title">Frost</span>
-                        <span class="c-color-navigation__label">Vit</span>
-                    </div>
-                </a>
-            </li>
-
-            <li class="c-color-navigation__item">
-                <a data-name="granit" href="#" class="c-color-navigation__link">
-                    <figure class="c-color-navigation__image"></figure>
-                    <div class="c-color-navigation__description">
-                        <span class="c-color-navigation__title">Granit</span>
-                        <span class="c-color-navigation__label">Mörkgrå</span>
-                    </div>
-                </a>
-            </li>
-
-            <li class="c-color-navigation__item">
-                <a data-name="fro" href="#" class="c-color-navigation__link">
-                    <figure class="c-color-navigation__image"></figure>
-                    <div class="c-color-navigation__description">
-                        <span class="c-color-navigation__title">Frö</span>
-                        <span class="c-color-navigation__label">Ljusbrun</span>
-                    </div>
-                </a>
-            </li>
+            <links>
+                <li class="c-color-navigation__item">
+                    <a href="{url}" class="c-color-navigation__link">
+                        <figure style="background-image: url({image});" class="c-color-navigation__image"></figure>
+                        <div class="c-color-navigation__description">
+                            <span class="c-color-navigation__title">{title}</span>
+                            <span class="c-color-navigation__label">{label}</span>
+                        </div>
+                    </a>
+                </li>
+            </links>
 
         </ul>
         <div data-target="js-c-color-navigation__items" class="js-c-color-navigation__scroll-navigation">
@@ -183,47 +94,6 @@
         height: calc(100% - 60px);
         transition: transform 2.6s cubic-bezier(0, 0.53, 0.32, 0.94);
     }
-
-    .c-color-navigation__item:nth-child(1) .c-color-navigation__image {
-        background-image: url(images/color-nav-1.png);
-    }
-
-    .c-color-navigation__item:nth-child(2) .c-color-navigation__image {
-        background-image: url(images/color-nav-2.png);
-    }
-
-    .c-color-navigation__item:nth-child(3) .c-color-navigation__image {
-        background-image: url(images/color-nav-3.png);
-    }
-
-    .c-color-navigation__item:nth-child(4) .c-color-navigation__image {
-        background-image: url(images/color-nav-4.png);
-    }
-
-    .c-color-navigation__item:nth-child(5) .c-color-navigation__image {
-        background-image: url(images/color-nav-5.png);
-    }
-
-    .c-color-navigation__item:nth-child(6) .c-color-navigation__image {
-        background-image: url(images/color-nav-6.png);
-    }
-
-    .c-color-navigation__item:nth-child(7) .c-color-navigation__image {
-        background-image: url(images/color-nav-7.png);
-    }
-
-    .c-color-navigation__item:nth-child(8) .c-color-navigation__image {
-        background-image: url(images/color-nav-8.png);
-    }
-
-    .c-color-navigation__item:nth-child(9) .c-color-navigation__image {
-        background-image: url(images/color-nav-9.png);
-    }
-
-    .c-color-navigation__item:nth-child(10) .c-color-navigation__image {
-        background-image: url(images/color-nav-10.png);
-    }
-
 
     .c-color-navigation__link:hover .c-color-navigation__image {
         transform: scale3d(1.05, 1.05, 1) translateY(-2px);

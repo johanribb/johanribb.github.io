@@ -1,18 +1,13 @@
 <div id="color-sections" class="c-color-sections">
 
     <colors>
+
         <div class="c-color-section">
-
             <picture class="c-color-section__image">
-
                 <source media="(max-width: 720px)" srcset="{image-mobile}">
-
-
                 <img src="{image}" alt="{header}">
-
             </picture>
 
-            <!--<img src="{image}" class="c-color-section__image">-->
             <div class="c-color-section__content">
                 <p class="c-color-section__label">{label}</p>
                 <h2 class="c-color-section__header">{header}</h2>
@@ -22,6 +17,7 @@
                     href="{url}">{cta}</a>
             </div>
         </div>
+
     </colors>
 
 
@@ -67,8 +63,12 @@
     }
 
     .c-color-section__image {
-        /*opacity: 0;*/
-        opacity: 1;
+        top: 0;
+        left: 0;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        opacity: 0;
         transition: opacity 0.6s linear;
     }
 
@@ -160,8 +160,9 @@
     }
 </style>
 
+
 <script>
-    /*
+
     $(function () {
 
         $(window).resize(function () {
@@ -210,7 +211,7 @@
                 .min(rect
                     .bottom, windowHeight));
 
-            if (visible >= maxInView) {
+            if (visible >= maxInView && visible > 0) {
                 maxInView = visible;
                 maxElement = section;
                 factor = visible / elementHeight;
@@ -218,20 +219,27 @@
             }
         });
 
+        if (maxElement) {
+            sections.children().each(function (index, value) {
+                if (value != maxElement[0]) {
+                    $(value).removeClass('c-color-section--in-view');
+                }
+            });
 
-        sections.children().each(function (index, value) {
-            if (value != maxElement[0]) {
+            maxElement.addClass('c-color-section--in-view');
+
+            var scaleFactor = maxElementTop > 0 ? factor : (1 + (1 - factor));
+
+            var scale = 1 + (scaleFactor / 10);
+
+            //  maxElement.find('.c-color-section__image').css('transform', 'scale3d(' + scale + ', ' + scale + ', 1)');
+        } else {
+            sections.children().each(function (index, value) {
                 $(value).removeClass('c-color-section--in-view');
-            }
-        });
+            });
+        }
 
-        maxElement.addClass('c-color-section--in-view');
 
-        var scaleFactor = maxElementTop > 0 ? factor : (1 + (1 - factor));
-
-        var scale = 1 + (scaleFactor / 10);
-
-        maxElement.find('.c-color-section__image').css('transform', 'scale3d(' + scale + ', ' + scale + ', 1)');
     }
-    */
+
 </script>
