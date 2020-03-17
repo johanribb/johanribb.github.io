@@ -11,8 +11,10 @@
             <div class="c-color-section__content">
                 <p class="c-color-section__label">{label}</p>
                 <h2 class="c-color-section__header">{header}</h2>
+                <!--
                 <p class="c-color-section__preamble">{preamble}</p>
                 <p class="c-color-section__preamble-mobile">{preamble-mobile}</p>
+                -->
                 <a style="color: {cta-color}; background: {cta-background};" class="c-color-section__cta"
                     href="{url}">{cta}</a>
             </div>
@@ -130,7 +132,8 @@
 
     @media (max-width: 720px) {
         .c-color-section__label {
-            display: none;
+            font-size: 16px;
+            margin: 0 0 12px 0;
         }
 
         .c-color-section__content {
@@ -141,7 +144,7 @@
         .c-color-section__header {
             font-size: 64px;
             line-height: 72px;
-            margin-bottom: 8px;
+            margin-bottom: 16px;
         }
 
         .c-color-section__preamble {
