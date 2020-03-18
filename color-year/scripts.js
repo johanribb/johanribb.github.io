@@ -168,6 +168,12 @@ var pageDetailsData = {
             "preamble": "Luften fyller lungorna med ny kraft. Det stilla suset av vajande trädtoppar. Skogens dofter och ljud. Vår färg Tall är noga balanserad och utvald för att förmedla den känslan.",
             "header-color": "#989A85"
         },
+        "video-reveal": {
+            "header": "Bjud in naturen",
+            "video": videoPath + "tall.mp4",
+            "image-count": "20",
+            "image-name": imagePath + "animations/tall_000"
+        },
         "image-text": {
             "header": "Fagerö Tall är senaste tillskottet i familjen gröna kök",
             "preamble": "Fagerö är ett av våra mest uppskattade kök. Köket gör sig fint i en sekelskiftesvåning men kan stylas i både klassisk och lantlig stil.",
@@ -176,13 +182,7 @@ var pageDetailsData = {
             "facts": "S8005 - R80B<br>Vattenbaserad",
             "swoosh-image": imagePath + "tall-swoosh.jpg"
         },
-        "video-reveal": {
-            "header": "Bjud in naturen",
-            "preamble": "Tall är en grön nyans som håller över tid och som går att kombinera med olika material på bänkskivor och tillbehör.",
-            "video": videoPath + "tall.mp4",
-            "image-count": "20",
-            "image-name": imagePath + "animations/tall_000"
-        },
+
         "product-scroll-list": {
             "header": "Våra luckor i tall",
             "products": [
@@ -211,6 +211,12 @@ var pageDetailsData = {
             "preamble": "Luften fyller lungorna med ny kraft. Det stilla suset av vajande trädtoppar. Skogens dofter och ljud. Vår färg Tall är noga balanserad och utvald för att förmedla den känslan.",
             "header-color": "#a7a7a7"
         },
+        "video-reveal": {
+            "header": "Bjud in naturen",
+            "video": videoPath + "frost.mp4",
+            "image-count": "20",
+            "image-name": imagePath + "animations/frost_000"
+        },
         "image-text": {
             "header": "Lindö Tall är senaste tillskottet i familjen gröna kök",
             "preamble": "Lindö är en klassisk exklusiv spegellucka med brett färgval och många vitrinval. Av alla våra kök är Lindö det som har mest profilerad ram och spegel.",
@@ -219,13 +225,7 @@ var pageDetailsData = {
             "facts": "S8005 - R80B<br>Vattenbaserad",
             "swoosh-image": imagePath + "frost-swoosh.jpg"
         },
-        "video-reveal": {
-            "header": "Bjud in naturen",
-            "preamble": "En jordnära grön kulör inspirarad av barrens färger istället.",
-            "video": videoPath + "frost.mp4",
-            "image-count": "20",
-            "image-name": imagePath + "animations/frost_000"
-        },
+
         "product-scroll-list": {
             "header": "Våra luckor i tall",
             "products": [
@@ -241,16 +241,6 @@ var pageDetailsData = {
                 { "name": "Lindö tall", "description": "Lucka med klart eller frostat glas alt krysspröjs. Vitmålad ramlucka av MDF Vitrin.", "url": "#", "padded-image": "true", "image": imagePath + "frost-scroll-10.jpg" },
                 { "name": "Lindö tall", "description": "Lucka med klart eller frostat glas alt krysspröjs. Vitmålad ramlucka av MDF Vitrin.", "url": "#", "padded-image": "true", "image": imagePath + "frost-scroll-11.jpg" },
                 { "name": "Lindö tall", "description": "Lucka med klart eller frostat glas alt krysspröjs. Vitmålad ramlucka av MDF Vitrin.", "url": "#", "padded-image": "true", "image": imagePath + "frost-scroll-12.jpg" }
-            ]
-        },
-        "color-swoosh": {
-            "header": "Färgen Tall är en mellangrön färg med inslag av gula pigment.",
-            "image": imagePath + "frost-swoosh.jpg",
-            "columns": [
-                { "label": "Ncs", "value": "S8005 - R80B" },
-                { "label": "Garanti", "value": "25 år" },
-                { "label": "Svanenmärkt", "value": "Ja" },
-                { "label": "Vattenbaserad", "value": "Ja" }
             ]
         }
     }

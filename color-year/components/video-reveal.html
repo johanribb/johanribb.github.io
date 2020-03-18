@@ -275,16 +275,22 @@
         left: 50%;
         top: 50%;
         transform: translate3d(-50%, -50%, 0);
-        max-width: 430px;
+        max-width: 600px;
     }
 
     .video-reveal__header {
-        font-size: 59px;
-        line-height: 66px;
+        font-size: 70px;
+        line-height: 70px;
         font-weight: 700;
         letter-spacing: 0;
         margin: 0 0 28px 0;
+        transform: translateY(35px);
+        transition: transform 0.4s ease-out;
 
+    }
+
+    .video-reveal--revealed .video-reveal__header {
+        transform: none;
     }
 
     .video-reveal__preamble {
@@ -359,6 +365,7 @@
         .video-reveal__header {
             font-size: 52px;
             line-height: 52px;
+            transform: none;
         }
 
         .video-reveal__preamble {
