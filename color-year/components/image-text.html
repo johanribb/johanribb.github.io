@@ -1,26 +1,54 @@
-<div class="section-wrapper">
-    <div class="image-text">
-        <div class="column column__image">
-            <img src="{image}">
-        </div>
-        <div class="column column__text-content">
-            <div class="text-content">
-                <h2>{header}</h2>
-                <p>{preamble}</p>
-                <div class="link-container">
-                    <links>
-                        <a class="link-container__link link-container__link--primary" href="{url}">{name}</a>
-                    </links>
+<div class="image-text__wrapper">
+    <div class="section-wrapper">
+        <div class="image-text">
+            <div class="column column__image">
+                <img src="{image}">
+            </div>
+            <div class="column column__text-content">
+                <div class="text-content">
+                    <h2>{header}</h2>
+                    <p>{preamble}</p>
+                    <div class="text-content__facts">{facts}</div>
+
+                    <div class="text-content__color-swosh">
+                        <img src="{swoosh-image}">
+                    </div>
+
+                    <div class="link-container">
+                        <links>
+                            <a class="link-container__link link-container__link--primary" href="{url}">{name}</a>
+                        </links>
+                    </div>
+
                 </div>
             </div>
         </div>
     </div>
 </div>
-
 <style>
+    .image-text__wrapper {
+        width: 100vw;
+        overflow: hidden;
+    }
+
     .image-text {
         display: flex;
         margin-bottom: 58px;
+    }
+
+    .text-content__color-swosh {
+        position: relative;
+        height: 200px;
+        margin-bottom: 10px;
+    }
+
+    .text-content__color-swosh img {
+        position: absolute;
+        height: 100%;
+        width: auto;
+        max-width: none;
+        left: -20px;
+        top: 0;
     }
 
     .image-text .column__image {
@@ -78,7 +106,32 @@
         color: #666;
     }
 
-    @media (max-width: 720px) {
+    .text-content__facts {
+        color: #C3A572;
+        font-size: 18px;
+        line-height: 32px;
+        margin-bottom: 60px;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+
+    }
+
+    @media (max-width: 1020px) {
+
+        .text-content__color-swosh {
+            height: 180px;
+        }
+
+        .text-content__color-swosh img {
+            position: absolute;
+            height: 100%;
+            width: auto;
+            max-width: none;
+            left: 50%;
+            top: 0;
+            transform: translateX(-50%);
+        }
+
         .image-text {
             display: block;
             margin-bottom: 100px;
