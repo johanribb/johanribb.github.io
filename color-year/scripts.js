@@ -18,8 +18,9 @@ var navigationData = {
 };
 
 var contactUsData = {
-    "header": "Prata färg med våra köksexperter!", "preamble": "Boka ett möte med en av våra köksdesigners för att snacka planering, material och färg av våra kök. Vi träffas digitalt, på telefon eller i butik", "link": "Boka ett möte", "url": "#"
+    "header": "Prata färg med våra köksdesigners!", "preamble": "Boka ett möte med en av våra köksdesigners. Vi går igenom dina behov, köksdrömmar, stilar och lösningar. Vi träffas digitalt, på telefon eller i butik", "link": "Boka möte nu", "url": "#"
 };
+
 var pageStartData = { "header": "Jordnära", "preamble": "Vår nya vattenbaserade färgkollektion", "button": "Upplev kollektionen", "url": "page-list.html", "image": imagePath + "marbodal-koks-farger.jpg" };
 var pageListData = {
     "video-hero": { "video-url": videoPath + "jordnara.mp4", "header": "Jordnära", "preamble": "10 färger inspirerade av vår Nordiska natur", "link": "Se alla våra färger" },
