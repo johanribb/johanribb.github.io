@@ -247,7 +247,7 @@ var pageDetailsData = {
             "header": "Moln",
             "video": videoPath + "moln.mp4",
             "image-count": "20",
-            "image-name": imagePath + "animations/moln_000"
+            "image-name": imagePath + "animations/Moln_000"
         },
         "image-text": {
             "header": "Moln",
@@ -290,7 +290,7 @@ var pageDetailsData = {
             "header": "Åska",
             "video": videoPath + "aska.mp4",
             "image-count": "20",
-            "image-name": imagePath + "animations/aska_000"
+            "image-name": imagePath + "animations/Aska_000"
         },
         "image-text": {
             "header": "Åska",
@@ -333,7 +333,7 @@ var pageDetailsData = {
             "header": "Granit",
             "video": videoPath + "granit.mp4",
             "image-count": "20",
-            "image-name": imagePath + "animations/granit_000"
+            "image-name": imagePath + "animations/Granit_000"
         },
         "image-text": {
             "header": "Granit",
@@ -376,7 +376,7 @@ var pageDetailsData = {
             "header": "Frö",
             "video": videoPath + "fro.mp4",
             "image-count": "20",
-            "image-name": imagePath + "animations/frö_000"
+            "image-name": imagePath + "animations/Frö_000"
         },
         "image-text": {
             "header": "Frö",
@@ -419,7 +419,7 @@ var pageDetailsData = {
             "header": "Sand",
             "video": videoPath + "sand.mp4",
             "image-count": "20",
-            "image-name": imagePath + "animations/sand_000"
+            "image-name": imagePath + "animations/Sand_000"
         },
         "image-text": {
             "header": "Sand",
@@ -462,7 +462,7 @@ var pageDetailsData = {
             "header": "Lin",
             "video": videoPath + "lin.mp4",
             "image-count": "20",
-            "image-name": imagePath + "animations/lin_000"
+            "image-name": imagePath + "animations/Lin_000"
         },
         "image-text": {
             "header": "Lin",
@@ -505,7 +505,7 @@ var pageDetailsData = {
             "header": "Bark",
             "video": videoPath + "bark.mp4",
             "image-count": "20",
-            "image-name": imagePath + "animations/bark_000"
+            "image-name": imagePath + "animations/Bark_000"
         },
         "image-text": {
             "header": "Bark",
@@ -548,7 +548,7 @@ var pageDetailsData = {
             "header": "Hav",
             "video": videoPath + "hav.mp4",
             "image-count": "20",
-            "image-name": imagePath + "animations/hav_000"
+            "image-name": imagePath + "animations/Hav_000"
         },
         "image-text": {
             "header": "Hav",
