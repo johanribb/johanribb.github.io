@@ -376,7 +376,7 @@ var pageDetailsData = {
             "header": "Frö",
             "video": videoPath + "fro.mp4",
             "image-count": "20",
-            "image-name": imagePath + "animations/fro_000"
+            "image-name": imagePath + "animations/frö_000"
         },
         "image-text": {
             "header": "Frö",
@@ -548,7 +548,7 @@ var pageDetailsData = {
             "header": "Hav",
             "video": videoPath + "hav.mp4",
             "image-count": "20",
-            "image-name": imagePath + "animations/bark_000"
+            "image-name": imagePath + "animations/hav_000"
         },
         "image-text": {
             "header": "Hav",
