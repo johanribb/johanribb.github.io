@@ -210,18 +210,18 @@ var pageDetailsData = {
         "product-scroll-list": {
             "header": "Våra luckor i Frost",
             "products": [
-                { "name": "Arkitekt Plus Frost", "description": "Vitmålad ramlucka av MDF. Vitrinlucka med klart eller frostat glas alt krysspröjs.", "url": "#", "padded-image": "true", "image": imagePath + "frost-scroll-1.jpg" },
-                { "name": "Öland Frost", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "frost-scroll-2.jpg" },
-                { "name": "Aspekt Frost", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "frost-scroll-3.jpg" },
-                { "name": "Torö Frost", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "frost-scroll-4.jpg" },
+                { "name": "Arkitekt Plus Frost", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "frost-scroll-1.jpg" },
+                { "name": "Ekerö tall", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "frost-scroll-10.jpg" },
                 { "name": "Viken Frost", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "frost-scroll-5.jpg" },
                 { "name": "Vollo Frost", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "frost-scroll-6.jpg" },
+                { "name": "Aspekt Frost", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "frost-scroll-3.jpg" },
+                { "name": "Aspö Frost", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "frost-scroll-4.jpg" },
+                { "name": "Arkitekt Frost", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "frost-scroll-12.jpg" },
+                { "name": "Vinga Frost", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "frost-scroll-11.jpg" },
                 { "name": "Lindö Frost", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "frost-scroll-7.jpg" },
-                { "name": "Form Frost", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "frost-scroll-8.jpg" },
                 { "name": "Fagerö Frost", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "frost-scroll-9.jpg" },
-                { "name": "Ekerö tall", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "frost-scroll-10.jpg" },
-                { "name": "Vinga tall", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "frost-scroll-11.jpg" },
-                { "name": "Arkitekt tall", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "frost-scroll-12.jpg" }
+                { "name": "Form Frost", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "frost-scroll-8.jpg" },
+                { "name": "Öland Frost", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "frost-scroll-2.jpg" }
             ]
         }
     },
@@ -263,8 +263,8 @@ var pageDetailsData = {
             "products": [
                 { "name": "Arkitekt Plus Moln", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "moln-scroll-1.jpg" },
                 { "name": "Lindö Moln", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "moln-scroll-2.jpg" },
+                { "name": "Fagerö Moln", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "moln-scroll-4.jpg" },
                 { "name": "Form Moln", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "moln-scroll-3.jpg" },
-                { "name": "Fagerö Moln", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "moln-scroll-4.jpg" }
             ]
         }
     },
@@ -306,8 +306,8 @@ var pageDetailsData = {
             "products": [
                 { "name": "Arkitekt Plus Åska", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "aska-scroll-1.jpg" },
                 { "name": "Lindö Åska", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "aska-scroll-2.jpg" },
-                { "name": "Form Åska", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "aska-scroll-3.jpg" },
-                { "name": "Fagerö Åska", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "aska-scroll-4.jpg" }
+                { "name": "Fagerö Åska", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "aska-scroll-4.jpg" },
+                { "name": "Form Åska", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "aska-scroll-3.jpg" }
             ]
         }
     },
@@ -349,8 +349,8 @@ var pageDetailsData = {
             "products": [
                 { "name": "Arkitekt Plus Granit", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "granit-scroll-1.jpg" },
                 { "name": "Lindö Granit", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "granit-scroll-2.jpg" },
-                { "name": "Form Granit", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "granit-scroll-3.jpg" },
-                { "name": "Fagerö Granit", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "granit-scroll-4.jpg" }
+                { "name": "Fagerö Granit", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "granit-scroll-4.jpg" },
+                { "name": "Form Granit", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "granit-scroll-3.jpg" }
             ]
         }
     },
@@ -392,8 +392,8 @@ var pageDetailsData = {
             "products": [
                 { "name": "Arkitekt Plus Frö", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "fro-scroll-1.jpg" },
                 { "name": "Lindö Frö", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "fro-scroll-2.jpg" },
-                { "name": "Form Frö", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "fro-scroll-3.jpg" },
-                { "name": "Fagerö Frö", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "fro-scroll-4.jpg" }
+                { "name": "Fagerö Frö", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "fro-scroll-4.jpg" },
+                { "name": "Form Frö", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "fro-scroll-3.jpg" }
             ]
         }
     },
@@ -435,8 +435,8 @@ var pageDetailsData = {
             "products": [
                 { "name": "Arkitekt Plus Sand", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "sand-scroll-1.jpg" },
                 { "name": "Lindö Sand", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "sand-scroll-2.jpg" },
-                { "name": "Form Sand", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "sand-scroll-3.jpg" },
-                { "name": "Fagerö Sand", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "sand-scroll-4.jpg" }
+                { "name": "Fagerö Sand", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "sand-scroll-4.jpg" },
+                { "name": "Form Sand", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "sand-scroll-3.jpg" }
             ]
         }
     },
@@ -478,8 +478,8 @@ var pageDetailsData = {
             "products": [
                 { "name": "Arkitekt Plus Lin", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "lin-scroll-1.jpg" },
                 { "name": "Lindö Lin", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "lin-scroll-2.jpg" },
-                { "name": "Form Lin", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "lin-scroll-3.jpg" },
-                { "name": "Fagerö Lin", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "lin-scroll-4.jpg" }
+                { "name": "Fagerö Lin", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "lin-scroll-4.jpg" },
+                { "name": "Form Lin", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "lin-scroll-3.jpg" }
             ]
         }
     },
@@ -521,8 +521,8 @@ var pageDetailsData = {
             "products": [
                 { "name": "Arkitekt Plus Bark", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "bark-scroll-1.jpg" },
                 { "name": "Lindö Bark", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "bark-scroll-2.jpg" },
-                { "name": "Form Bark", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "bark-scroll-3.jpg" },
-                { "name": "Fagerö Bark", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "bark-scroll-4.jpg" }
+                { "name": "Fagerö Bark", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "bark-scroll-4.jpg" },
+                { "name": "Form Bark", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "bark-scroll-3.jpg" }
             ]
         }
     },
@@ -564,8 +564,8 @@ var pageDetailsData = {
             "products": [
                 { "name": "Arkitekt Plus Hav", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "hav-scroll-1.jpg" },
                 { "name": "Lindö Hav", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "hav-scroll-2.jpg" },
-                { "name": "Form Hav", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "hav-scroll-3.jpg" },
-                { "name": "Fagerö Hav", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "hav-scroll-4.jpg" }
+                { "name": "Fagerö Hav", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "hav-scroll-4.jpg" },
+                { "name": "Form Hav", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "hav-scroll-3.jpg" }
             ]
         }
     }
