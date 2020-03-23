@@ -1,6 +1,7 @@
 var assetsPath = "images/";
 var imagePath = "images-products/";
 var videoPath = "https://marbodal.test.nobiadigital.com/globalassets/fargaret/";
+var sitePath = "https://marbodal.se";
 
 var navigationData = {
     "links": [
@@ -19,7 +20,7 @@ var navigationData = {
 
 
 var contactUsData = {
-    "header": "Prata färg med våra köksdesigners!", "preamble": "Boka ett möte med en av våra köksdesigners. Vi går igenom dina behov, köksdrömmar, stilar och lösningar. Vi träffas digitalt, på telefon eller i butik", "link": "Boka möte nu", "url": "#"
+    "header": "Prata färg med våra köksdesigners", "preamble": "Boka ett möte med en av våra köksdesigners. Vi går igenom dina behov, köksdrömmar, stilar och lösningar. Vi träffas digitalt, på telefon eller i butik", "link": "Boka möte nu", "url": "#"
 };
 
 var pageStartData = { "header": "Jordnära", "preamble": "Vår nya vattenbaserade färgkollektion", "button": "Upplev kollektionen", "url": "page-list.html", "image": imagePath + "marbodal-koks-farger.jpg" };
@@ -135,9 +136,13 @@ var pageDetailsData = {
     "tall": {
         "product-hero": {
             "products":
-                [{ "label": "Handtag", "name": "Grimlund 2A Vit", "url": "#" },
-                { "label": "Handtag", "name": "Grimlund 7B Vit", "url": "#" },
-                { "label": "Lucka", "name": "Lindö", "url": "#" }],
+                [{ "label": "Bänkskiva", "name": "Kärn Ask Skiffer", "url": sitePath + "/kok/tillbehor/bankskivor/massiv-tra/" },
+                { "label": "Handtag", "name": "Manta Ek", "url": sitePath + "/tillbehor/handtag-knoppar/manta-ek-013277500000/" },
+                { "label": "Handtag", "name": "Solo Vit", "url": sitePath + "/tillbehor/handtag-knoppar/solo-vit-013276730000/" },
+                { "label": "Knopp", "name": "Porslinsknopp Vit", "url": sitePath + "/tillbehor/handtag-knoppar/porslinsknopp-013275090000/" },
+                { "label": "Lucka", "name": "Arkitekt Plus", "url": sitePath + "/kok/klassiskt/arkitekt-plus/" },
+                { "label": "Lucka", "name": "Form", "url": sitePath + "/kok/lantligt/form/" }],
+
             "expander-color": "rgba(129, 131, 116, 0.8)",
             "image": imagePath + "tall-hero.jpg",
             "image-mobile": imagePath + "tall-hero-mobile.jpg",
@@ -168,19 +173,22 @@ var pageDetailsData = {
         "product-scroll-list": {
             "header": "Våra luckor i Tall",
             "products": [
-                { "name": "Arkitekt Plus Tall", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "tall-scroll-1.jpg" },
-                { "name": "Lindö Tall", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "tall-scroll-2.jpg" },
-                { "name": "Form Tall", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "tall-scroll-3.jpg" },
-                { "name": "Fagerö tall", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "tall-scroll-4.jpg" }
+                { "name": "Arkitekt Plus Tall", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "arkitekt-plus-tall.jpg" },
+                { "name": "Fagerö tall", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "fagero-tall.jpg" },
+                { "name": "Form Tall", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "form-tall.jpg" },
+                { "name": "Lindö Tall", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "lindo-tall.jpg" },
             ]
         }
     },
     "frost": {
         "product-hero": {
             "products":
-                [{ "label": "Handtag", "name": "Grimlund 2A Vit", "url": "#" },
-                { "label": "Handtag", "name": "Grimlund 7B Vit", "url": "#" },
-                { "label": "Lucka", "name": "Lindö", "url": "#" }],
+                [{ "label": "Bänkskiva", "name": "Corestone Vit", "url": sitePath + "/kok/tillbehor/bankskivor/corestone/" },
+                { "label": "Handtag", "name": "Solo Vit", "url": sitePath + "/tillbehor/handtag-knoppar/solo-vit-013276730000/" },
+                { "label": "Knopp", "name": "Porslinsknopp Vit", "url": sitePath + "/tillbehor/handtag-knoppar/porslinsknopp-013275090000/" },
+                { "label": "Knoppbräda", "name": "Knoppbräda Ek", "url": sitePath + "/kok/tillbehor/ovriga-tillbehor/knoppbrada-i-naturek/" },
+                { "label": "Lucka", "name": "Arkitekt Plus", "url": sitePath + "/kok/klassiskt/arkitekt-plus/" }],
+
             "expander-color": "rgba(160, 160, 160, 0.8)",
             "image": imagePath + "frost-hero.jpg",
             "image-mobile": imagePath + "frost-hero-mobile.jpg",
@@ -211,28 +219,30 @@ var pageDetailsData = {
         "product-scroll-list": {
             "header": "Våra luckor i Frost",
             "products": [
-                { "name": "Arkitekt Plus Frost", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "frost-scroll-1.jpg" },
-                { "name": "Ekerö tall", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "frost-scroll-10.jpg" },
-                { "name": "Viken Frost", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "frost-scroll-5.jpg" },
-                { "name": "Vollo Frost", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "frost-scroll-6.jpg" },
-                { "name": "Aspekt Frost", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "frost-scroll-3.jpg" },
-                { "name": "Aspö Frost", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "frost-scroll-4.jpg" },
-                { "name": "Arkitekt Frost", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "frost-scroll-12.jpg" },
-                { "name": "Vinga Frost", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "frost-scroll-11.jpg" },
-                { "name": "Lindö Frost", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "frost-scroll-7.jpg" },
-                { "name": "Fagerö Frost", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "frost-scroll-9.jpg" },
-                { "name": "Form Frost", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "frost-scroll-8.jpg" },
-                { "name": "Öland Frost", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "frost-scroll-2.jpg" }
+                { "name": "Arkitekt Plus Frost", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "arkitekt-plus-frost.jpg" },
+                { "name": "Fagerö Frost", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "fagero-frost.jpg" },
+                { "name": "Form Frost", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "form-frost.jpg" },
+                { "name": "Lindö Frost", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "lindo-frost.jpg" },
+                { "name": "Aspö Frost", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "aspo-frost.jpg" },
+                { "name": "Aspekt Frost", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "aspekt-frost.jpg" },
+                { "name": "Arkitekt Frost", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "arkitekt-frost.jpg" },
+                { "name": "Ekerö frost", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "ekero-frost.jpg" },
+                { "name": "Torö2 frost", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "ekero-frost.jpg" },
+                { "name": "Viken Frost", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "viken-frost.jpg" },
+                { "name": "Vinga Frost", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "vinga-frost.jpg" },
+                { "name": "Vollo Frost", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "vollo-frost.jpg" },
+                { "name": "Åkerö Frost", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "akero-frost.jpg" },
+                { "name": "Öland Frost", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "oland-frost.jpg" }
             ]
         }
     },
     "moln": {
         "product-hero": {
             "products":
-                [{ "label": "Handtag", "name": "Grimlund 2A Vit", "url": "#" },
-                { "label": "Handtag", "name": "Grimlund 7B Vit", "url": "#" },
-                { "label": "Lucka", "name": "Lindö", "url": "#" }],
-            "expander-color": "rgba(160, 160, 160, 0.8)",
+                [{ "label": "Handtag", "name": "Lounge Krom", "url": sitePath + "/tillbehor/handtag-knoppar/farg--krom" },
+                { "label": "Blandare", "name": "Grohe Minta Rostfri Upip", "url": sitePath + "/tillbehor/koksblandare / grohe - minta - u - pip - 014804820000/" },
+                { "label": "Lucka", "name": "Arkitekt Plus", "url": sitePath + "/kok/klassiskt/arkitekt-plus/" }],
+            "expander-color": "rgba(118, 118, 119, 0.8)",
             "image": imagePath + "moln-hero.jpg",
             "image-mobile": imagePath + "moln-hero-mobile.jpg",
             "header-key": "Moln", "header":
@@ -262,20 +272,22 @@ var pageDetailsData = {
         "product-scroll-list": {
             "header": "Våra luckor i Moln",
             "products": [
-                { "name": "Arkitekt Plus Moln", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "moln-scroll-1.jpg" },
-                { "name": "Lindö Moln", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "moln-scroll-2.jpg" },
-                { "name": "Fagerö Moln", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "moln-scroll-4.jpg" },
-                { "name": "Form Moln", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "moln-scroll-3.jpg" },
+                { "name": "Arkitekt Plus Moln", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "arkitekt-plus-moln.jpg" },
+                { "name": "Fagerö Moln", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "fagero-moln.jpg" },
+                { "name": "Form Moln", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "form-moln.jpg" },
+                { "name": "Lindö Moln", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "lindo-moln.jpg" },
+                { "name": "Åkerö Moln", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "akero-moln.jpg" },
+                { "name": "Arkitekt Plus Zick-Zack Moln", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "apzz-moln.jpg" }
             ]
         }
     },
     "aska": {
         "product-hero": {
             "products":
-                [{ "label": "Handtag", "name": "Grimlund 2A Vit", "url": "#" },
-                { "label": "Handtag", "name": "Grimlund 7B Vit", "url": "#" },
-                { "label": "Lucka", "name": "Lindö", "url": "#" }],
-            "expander-color": "rgba(160, 160, 160, 0.8)",
+                [{ "label": "Handtag", "name": "Diner Antracit", "url": sitePath + "/tillbehor/handtag-knoppar/diner-borstad-antracit-013278520000/" },
+                { "label": "Blandare", "name": "Tapwell SK 184", "url": sitePath + "/tillbehor/koksblandare/tapwellsk184-krom-014804390000/" },
+                { "label": "Lucka", "name": "Arkitekt Plus", "url": sitePath + "/kok/klassiskt/arkitekt-plus/" }],
+            "expander-color": "rgba(57, 59, 62, 0.8)",
             "image": imagePath + "aska-hero.jpg",
             "image-mobile": imagePath + "aska-hero-mobile.jpg",
             "header-key": "Åska", "header":
@@ -305,20 +317,22 @@ var pageDetailsData = {
         "product-scroll-list": {
             "header": "Våra luckor i Åska",
             "products": [
-                { "name": "Arkitekt Plus Åska", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "aska-scroll-1.jpg" },
-                { "name": "Lindö Åska", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "aska-scroll-2.jpg" },
-                { "name": "Fagerö Åska", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "aska-scroll-4.jpg" },
-                { "name": "Form Åska", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "aska-scroll-3.jpg" }
+                { "name": "Arkitekt Plus Åska", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "arkitekt-plus-aska.jpg" },
+                { "name": "Fagerö Åska", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "fagero-aska.jpg" },
+                { "name": "Form Åska", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "form-aska.jpg" },
+                { "name": "Lindö Åska", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "lindo-aska.jpg" },
+                { "name": "Viken Åska", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "viken-aska.jpg" },
             ]
         }
     },
     "granit": {
         "product-hero": {
-            "products":
-                [{ "label": "Handtag", "name": "Grimlund 2A Vit", "url": "#" },
-                { "label": "Handtag", "name": "Grimlund 7B Vit", "url": "#" },
-                { "label": "Lucka", "name": "Lindö", "url": "#" }],
-            "expander-color": "rgba(160, 160, 160, 0.8)",
+            "products": [{ "label": "Bänkskiva", "name": "Steelgrey Natursten", "url": sitePath + "/kok/tillbehor/bankskivor/natursten/" },
+            { "label": "Bänkskiva", "name": "Laminat Svart Mocka", "url": sitePath + "/kok/tillbehor/bankskivor/laminatbankskivor/" },
+            { "label": "Blandare", "name": "Tapwell Arm 184 Mattsvart", "url": sitePath + "/tillbehor/koksblandare/tapwell-arm-184-mattsvart-014804840000/" },
+            { "label": "Lucka", "name": "Form", "url": sitePath + "/kok/lantligt/form/" }],
+
+            "expander-color": "rgba(82, 83, 78, 0.8)",
             "image": imagePath + "granit-hero.jpg",
             "image-mobile": imagePath + "granit-hero-mobile.jpg",
             "header-key": "Granit", "header":
@@ -348,20 +362,21 @@ var pageDetailsData = {
         "product-scroll-list": {
             "header": "Våra luckor i Granit",
             "products": [
-                { "name": "Arkitekt Plus Granit", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "granit-scroll-1.jpg" },
-                { "name": "Lindö Granit", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "granit-scroll-2.jpg" },
-                { "name": "Fagerö Granit", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "granit-scroll-4.jpg" },
-                { "name": "Form Granit", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "granit-scroll-3.jpg" }
+                { "name": "Arkitekt Plus Granit", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "arkitekt-plus-granit.jpg" },
+                { "name": "Fagerö Granit", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "fagero-granit.jpg" },
+                { "name": "Form Granit", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "form-granit.jpg" },
+                { "name": "Lindö Granit", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "lindo-granit.jpg" }
             ]
         }
     },
     "fro": {
         "product-hero": {
             "products":
-                [{ "label": "Handtag", "name": "Grimlund 2A Vit", "url": "#" },
-                { "label": "Handtag", "name": "Grimlund 7B Vit", "url": "#" },
-                { "label": "Lucka", "name": "Lindö", "url": "#" }],
-            "expander-color": "rgba(160, 160, 160, 0.8)",
+                [{ "label": "Handtag", "name": "Solo Vit", "url": sitePath + "/tillbehor/handtag-knoppar/solo-vit-013276730000/" },
+                { "label": "Knopp", "name": "Porslinsknopp Vit", "url": sitePath + "/tillbehor/handtag-knoppar/porslinsknopp-013275090000/" },
+                { "label": "Lucka", "name": "Fagerö", "url": sitePath + "/kok/lantligt/fagero/" }],
+
+            "expander-color": "rgba(82, 83, 78, 0.8)",
             "image": imagePath + "fro-hero.jpg",
             "image-mobile": imagePath + "fro-hero-mobile.jpg",
             "header-key": "Frö", "header":
@@ -391,20 +406,21 @@ var pageDetailsData = {
         "product-scroll-list": {
             "header": "Våra luckor i Frö",
             "products": [
-                { "name": "Arkitekt Plus Frö", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "fro-scroll-1.jpg" },
-                { "name": "Lindö Frö", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "fro-scroll-2.jpg" },
-                { "name": "Fagerö Frö", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "fro-scroll-4.jpg" },
-                { "name": "Form Frö", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "fro-scroll-3.jpg" }
+                { "name": "Arkitekt Plus Frö", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "arkitekt-plus-fro.jpg" },
+                { "name": "Fagerö Frö", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "fagero-fro.jpg" },
+                { "name": "Form Frö", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "form-fro.jpg" },
+                { "name": "Lindö Frö", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "lindo-fro.jpg" }
             ]
         }
     },
     "sand": {
         "product-hero": {
             "products":
-                [{ "label": "Handtag", "name": "Grimlund 2A Vit", "url": "#" },
-                { "label": "Handtag", "name": "Grimlund 7B Vit", "url": "#" },
-                { "label": "Lucka", "name": "Lindö", "url": "#" }],
-            "expander-color": "rgba(160, 160, 160, 0.8)",
+                [{ "label": "Bänkskiva", "name": "Kvartskomposit Beach Clay Beige", "url": sitePath + "/kok/tillbehor/bankskivor/kvartskomposit/" },
+                { "label": "Redskapsstång", "name": "Krokar i Krom", "url": sitePath + "/kok/tillbehor/ovriga-tillbehor/" },
+                { "label": "Lucka", "name": "Arkitekt Plus", "url": sitePath + "/kok/klassiskt/arkitekt-plus/" }],
+
+            "expander-color": "rgba(133, 126, 108,0.8)",
             "image": imagePath + "sand-hero.jpg",
             "image-mobile": imagePath + "sand-hero-mobile.jpg",
             "header-key": "Sand", "header":
@@ -434,20 +450,23 @@ var pageDetailsData = {
         "product-scroll-list": {
             "header": "Våra luckor i Sand",
             "products": [
-                { "name": "Arkitekt Plus Sand", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "sand-scroll-1.jpg" },
-                { "name": "Lindö Sand", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "sand-scroll-2.jpg" },
-                { "name": "Fagerö Sand", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "sand-scroll-4.jpg" },
-                { "name": "Form Sand", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "sand-scroll-3.jpg" }
+                { "name": "Arkitekt Plus Sand", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "arkitekt-plus-sand.jpg" },
+                { "name": "Fagerö Sand", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "fagero-sand.jpg" },
+                { "name": "Form Sand", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "form-sand.jpg" },
+                { "name": "Lindö Sand", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "lindo-sand.jpg" }
             ]
         }
     },
     "lin": {
         "product-hero": {
             "products":
-                [{ "label": "Handtag", "name": "Grimlund 2A Vit", "url": "#" },
-                { "label": "Handtag", "name": "Grimlund 7B Vit", "url": "#" },
-                { "label": "Lucka", "name": "Lindö", "url": "#" }],
-            "expander-color": "rgba(160, 160, 160, 0.8)",
+                [{ "label": "Bänkskiva", "name": "Carraramarmor", "url": sitePath + "/kok/tillbehor/bankskivor/natursten/" },
+                { "label": "Handtag", "name": "Skålen Rostfritt", "url": sitePath + "/tillbehor/handtag-knoppar/skalen-rostfri-013273810000/" },
+                { "label": "Handtag", "name": "Fall Borstad Rostfri", "url": sitePath + "/tillbehor/handtag-knoppar/fall-rostfri-borstad-013278630000/" },
+                { "label": "Konsol", "name": "Konsol", "url": sitePath + "/kok/produktnyheter/" },
+                { "label": "Lucka", "name": "Form", "url": sitePath + "/kok/lantligt/form/" },
+                { "label": "Lucka", "name": "Arkitekt Plus", "url": sitePath + "/kok/klassiskt/arkitekt-plus/" }],
+            "expander-color": "rgba(82, 83, 78, 0.8)",
             "image": imagePath + "lin-hero.jpg",
             "image-mobile": imagePath + "lin-hero-mobile.jpg",
             "header-key": "Lin", "header":
@@ -456,7 +475,7 @@ var pageDetailsData = {
         },
         "product-description": {
             "header": "Från en vacker sommaräng hämtade vi vår inspiration till färgen Lin.",
-            "preamble": "En tidlös klassiker. Den lätta tonen i vår ljus- gröna färg Lin skapar en öppen och inbjudande känsla som lämnar dig med ett leende på läpparna. Det är en färg som andas nystart och som med sin gröna ton inspi- rerar till växtlighet och bidrar med livskraft och energi.",
+            "preamble": "En tidlös klassiker. Den lätta tonen i vår ljusgröna färg Lin skapar en öppen och inbjudande känsla som lämnar dig med ett leende på läpparna. Det är en färg som andas nystart och som med sin gröna ton inspirerar till växtlighet och bidrar med livskraft och energi.",
             "header-color": "#a7a7a7"
         },
         "video-reveal": {
@@ -477,20 +496,23 @@ var pageDetailsData = {
         "product-scroll-list": {
             "header": "Våra luckor i Lin",
             "products": [
-                { "name": "Arkitekt Plus Lin", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "lin-scroll-1.jpg" },
-                { "name": "Lindö Lin", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "lin-scroll-2.jpg" },
-                { "name": "Fagerö Lin", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "lin-scroll-4.jpg" },
-                { "name": "Form Lin", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "lin-scroll-3.jpg" }
+                { "name": "Arkitekt Plus Lin", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "arkitekt-plus-lin.jpg" },
+                { "name": "Fagerö Lin", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "fagero-lin.jpg" },
+                { "name": "Form Lin", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "form-lin.jpg" },
+                { "name": "Lindö Lin", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "lindo-lin.jpg" },
+                { "name": "Arkitekt Plus Zick-Zack Lin", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "apzz-lin.jpg" }
             ]
         }
     },
     "bark": {
         "product-hero": {
             "products":
-                [{ "label": "Handtag", "name": "Grimlund 2A Vit", "url": "#" },
-                { "label": "Handtag", "name": "Grimlund 7B Vit", "url": "#" },
-                { "label": "Lucka", "name": "Lindö", "url": "#" }],
-            "expander-color": "rgba(160, 160, 160, 0.8)",
+                [{ "label": "Bänkskiva", "name": "Thermo Ask", "url": sitePath + "/kok/tillbehor/bankskivor/massiv-tra/" },
+                { "label": "Handtag", "name": "Brohult Svart", "url": sitePath + "/tillbehor/handtag-knoppar/brohult-m-svart-013278310000/" },
+                { "label": "Blandare", "name": "Tappwell Artm 184 Mattsvart", "url": sitePath + "/tillbehor/koksblandare/tapwell-arm-184-mattsvart-014804840000/" },
+                { "label": "Lucka", "name": "Arkitekt Plus", "url": sitePath + "/kok/klassiskt/arkitekt-plus/" }],
+
+            "expander-color": "rgba(27, 24, 22, 0.8)",
             "image": imagePath + "bark-hero.jpg",
             "image-mobile": imagePath + "bark-hero-mobile.jpg",
             "header-key": "Bark", "header":
@@ -520,20 +542,21 @@ var pageDetailsData = {
         "product-scroll-list": {
             "header": "Våra luckor i Bark",
             "products": [
-                { "name": "Arkitekt Plus Bark", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "bark-scroll-1.jpg" },
-                { "name": "Lindö Bark", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "bark-scroll-2.jpg" },
-                { "name": "Fagerö Bark", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "bark-scroll-4.jpg" },
-                { "name": "Form Bark", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "bark-scroll-3.jpg" }
+                { "name": "Arkitekt Plus Bark", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "arkitekt-plus-bark.jpg" },
+                { "name": "Fagerö Bark", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "fagero-bark.jpg" },
+                { "name": "Form Bark", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "form-bark.jpg" },
+                { "name": "Lindö Bark", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "lindo-bark.jpg" }
             ]
         }
     },
     "hav": {
         "product-hero": {
             "products":
-                [{ "label": "Handtag", "name": "Grimlund 2A Vit", "url": "#" },
-                { "label": "Handtag", "name": "Grimlund 7B Vit", "url": "#" },
-                { "label": "Lucka", "name": "Lindö", "url": "#" }],
-            "expander-color": "rgba(160, 160, 160, 0.8)",
+                [{ "label": "Bänkskiva", "name": "Vitbetsad Ek", "url": sitePath + "/kok/tillbehor/bankskivor/massiv-tra/" },
+                { "label": "Handtag", "name": "Lounge Mässing", "url": sitePath + "/tillbehor/handtag-knoppar/lounge-massing-013278670000/" },
+                { "label": "Handtag", "name": "Lounge Mässing i brunt läder", "url": sitePath + "/tillbehor/handtag-knoppar/lounge-massing-morkbrunt-lader-013278700000/" },
+                { "label": "Lucka", "name": "Arkitekt Plus", "url": sitePath + "/kok/klassiskt/arkitekt-plus/" }],
+            "expander-color": "rgba(93, 97,112, 0.8)",
             "image": imagePath + "hav-hero.jpg",
             "image-mobile": imagePath + "hav-hero-mobile.jpg",
             "header-key": "Hav", "header":
@@ -563,10 +586,10 @@ var pageDetailsData = {
         "product-scroll-list": {
             "header": "Våra luckor i Hav",
             "products": [
-                { "name": "Arkitekt Plus Hav", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "hav-scroll-1.jpg" },
-                { "name": "Lindö Hav", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "hav-scroll-2.jpg" },
-                { "name": "Fagerö Hav", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "hav-scroll-4.jpg" },
-                { "name": "Form Hav", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "hav-scroll-3.jpg" }
+                { "name": "Arkitekt Plus Hav", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "arkitekt-plus-hav.jpg" },
+                { "name": "Fagerö Hav", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "fagero-hav.jpg" },
+                { "name": "Form Hav", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "form-hav.jpg" },
+                { "name": "Lindö Hav", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "lindo-hav.jpg" }
             ]
         }
     }
