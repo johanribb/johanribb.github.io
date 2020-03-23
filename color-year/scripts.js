@@ -17,13 +17,14 @@ var navigationData = {
     ]
 };
 
+
 var contactUsData = {
     "header": "Prata färg med våra köksdesigners!", "preamble": "Boka ett möte med en av våra köksdesigners. Vi går igenom dina behov, köksdrömmar, stilar och lösningar. Vi träffas digitalt, på telefon eller i butik", "link": "Boka möte nu", "url": "#"
 };
 
 var pageStartData = { "header": "Jordnära", "preamble": "Vår nya vattenbaserade färgkollektion", "button": "Upplev kollektionen", "url": "page-list.html", "image": imagePath + "marbodal-koks-farger.jpg" };
 var pageListData = {
-    "video-hero": { "video-url": videoPath + "jordnara.mp4", "header": "Jordnära", "preamble": "10 färger inspirerade av vår Nordiska natur", "link": "Se alla våra färger" },
+    "video-hero": { "video-url": videoPath + "jordnara.mp4", "header": "Jordnära", "preamble": "10 färger inspirerade av vår nordiska natur", "link": "Se alla våra färger" },
     "description": { "header": "Från de grönaste skogarna till de blåaste haven. Från de granitgrå bergen till de vidsträckta sandstränderna.", "preamble": "Från vintermorgonens frost till sommaråskans mullrande framfart. För att finna det vi sökte letade vi där allt en gång började. I vår natur. Här fann vi vår nya färgkollektion. Vi kallar den Jordnära.", "header-color": "#C3A472" },
     "sections": {
         "colors": [
@@ -39,7 +40,7 @@ var pageListData = {
             },
             {
                 "header": "Sand",
-                "label": "Vår beiga färg",
+                "label": "Vår beige färg",
                 "image": imagePath + "list-sand.jpg",
                 "image-mobile": imagePath + "list-sand-mobile.jpg",
                 "cta": "Upplev sand",
@@ -337,7 +338,7 @@ var pageDetailsData = {
         },
         "image-text": {
             "header": "Granit",
-            "preamble": "Granit är en neutral-färg som passar till de flesta kulörer och köksstilar. Skapa ett stilsäkert kök genom att välja tillbehör från den mörkare skalan.",
+            "preamble": "Granit är en neutral färg som passar till de flesta kulörer och köksstilar. Skapa ett stilsäkert kök genom att välja tillbehör från den mörkare skalan.",
             "image": imagePath + "granit-article.jpg",
             "links": [{ "name": "Se alla mörkgrå kök ›", "url": "#" }],
             "facts": "NCS S 7500-N<br>Vattenbaserad",
@@ -380,7 +381,7 @@ var pageDetailsData = {
         },
         "image-text": {
             "header": "Frö",
-            "preamble": "Frö är en behaglig, omhuldande och dertagande färg som anpassar sig fint till alla färger du väljer att lägga till.",
+            "preamble": "Frö är en behaglig, omhuldande och dertagande färg som anpassar sig fint till alla färger du väljer att lägga till. Greige är en blandning av beige och grått.",
             "image": imagePath + "fro-article.jpg",
             "links": [{ "name": "Se alla greige kök ›", "url": "#" }],
             "facts": "NCS S 4502-Y<br>Vattenbaserad",
@@ -407,7 +408,7 @@ var pageDetailsData = {
             "image": imagePath + "sand-hero.jpg",
             "image-mobile": imagePath + "sand-hero-mobile.jpg",
             "header-key": "Sand", "header":
-                "Våra beigea kök i färgen",
+                "Våra beige kök i färgen",
             "preamble": "NCS S 2005-Y20R &middot; Vattenbaserad"
         },
         "product-description": {
@@ -425,7 +426,7 @@ var pageDetailsData = {
             "header": "Sand",
             "preamble": "Sand är en jordad och rofylld kulör som har mer vitalitet i sig än exempelvis Bark, och som skapar en ombonad, ljus och sofistikerad känsla i köket.",
             "image": imagePath + "sand-article.jpg",
-            "links": [{ "name": "Se alla beigea kök ›", "url": "#" }],
+            "links": [{ "name": "Se alla beige kök ›", "url": "#" }],
             "facts": "NCS S 2005-Y20R<br>Vattenbaserad",
             "swoosh-image": imagePath + "sand-swoosh.jpg"
         },
@@ -541,7 +542,7 @@ var pageDetailsData = {
         },
         "product-description": {
             "header": "Likt havets vågor som slår mot en klippa, eller som vandrar upp för en strand, skiftar vår blåa färg Hav i ton och känsla beroende på ljus och övriga färger i rummet.",
-            "preamble": "Det är en trygg och pålitlig kulör som tillhör den avkopplade färgskalan. Med dess trygghet och mörker kan du skapa ett lugnare kök med en känsla av stillhet.",
+            "preamble": "Det är en trygg och pålitlig kulör som tillhör den avkopplande färgskalan. Med dess trygghet och mörker kan du skapa ett lugnare kök med en känsla av stillhet.",
             "header-color": "#a7a7a7"
         },
         "video-reveal": {
