@@ -8,12 +8,12 @@ var navigationData = {
         { "title": "Sand", "label": "Beige", "url": getPageUrl("sand"), "image": assetsPath + "color-nav-2.png" },
         { "title": "Hav", "label": "Blå", "url": getPageUrl("hav"), "image": assetsPath + "color-nav-3.png" },
         { "title": "Åska", "label": "Mellangrå", "url": getPageUrl("aska"), "image": assetsPath + "color-nav-4.png" },
-        { "title": "Lin", "label": "Ljus", "url": getPageUrl("lin"), "image": assetsPath + "color-nav-5.png" },
+        { "title": "Lin", "label": "Ljusgrön", "url": getPageUrl("lin"), "image": assetsPath + "color-nav-5.png" },
         { "title": "Bark", "label": "Brun", "url": getPageUrl("bark"), "image": assetsPath + "color-nav-6.png" },
         { "title": "Moln", "label": "Ljusgrå", "url": getPageUrl("moln"), "image": assetsPath + "color-nav-7.png" },
         { "title": "Frost", "label": "Vit", "url": getPageUrl("frost"), "image": assetsPath + "color-nav-8.png" },
         { "title": "Granit", "label": "Mörkgrå", "url": getPageUrl("granit"), "image": assetsPath + "color-nav-9.png" },
-        { "title": "Frö", "label": "Ljusbrun", "url": getPageUrl("fro"), "image": assetsPath + "color-nav-10.png" }
+        { "title": "Frö", "label": "Greige", "url": getPageUrl("fro"), "image": assetsPath + "color-nav-10.png" }
     ]
 };
 
