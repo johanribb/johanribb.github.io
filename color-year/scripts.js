@@ -1,7 +1,18 @@
 var assetsPath = "images/";
 var imagePath = "images-products/";
-var videoPath = "https://marbodal.test.nobiadigital.com/globalassets/fargaret/";
 var sitePath = "https://marbodal.se";
+
+var videoJordnara = "https://res.cloudinary.com/dgg9enyjv/video/upload/v1584971801/jordnara_t96vcj.mp4";
+var videoFrost = "https://res.cloudinary.com/dgg9enyjv/video/upload/v1584971764/frost_zphpgm.mp4";
+var videoBark = "https://res.cloudinary.com/dgg9enyjv/video/upload/v1584971747/bark_oennvb.mp4";
+var videoSand = "https://res.cloudinary.com/dgg9enyjv/video/upload/v1584971734/sand_m5zsa6.mp4";
+var videoTall = "https://res.cloudinary.com/dgg9enyjv/video/upload/v1584971733/tall_r8k6rt.mp4";
+var videoAska = "https://res.cloudinary.com/dgg9enyjv/video/upload/v1584971719/aska_ombswx.mp4";
+var videoLin = "https://res.cloudinary.com/dgg9enyjv/video/upload/v1584971716/lin_q9tgsp.mp4";
+var videoFro = "https://res.cloudinary.com/dgg9enyjv/video/upload/v1584971715/fro_bgaiqt.mp4";
+var videoHav = "https://res.cloudinary.com/dgg9enyjv/video/upload/v1584971701/hav_n9nhyl.mp4";
+var videoMoln = "https://res.cloudinary.com/dgg9enyjv/video/upload/v1584971699/moln_sd9njq.mp4";
+var videoGranit = "https://res.cloudinary.com/dgg9enyjv/video/upload/v1584971666/granit_wsyjme.mp4";
 
 var navigationData = {
     "links": [
@@ -18,14 +29,13 @@ var navigationData = {
     ]
 };
 
-
 var contactUsData = {
     "header": "Prata färg med våra köksdesigners", "preamble": "Boka ett möte med en av våra köksdesigners. Vi går igenom dina behov, köksdrömmar, stilar och lösningar. Vi träffas digitalt, på telefon eller i butik", "link": "Boka möte nu", "url": "#"
 };
 
 var pageStartData = { "header": "Jordnära", "preamble": "Vår nya vattenbaserade färgkollektion", "button": "Upplev kollektionen", "url": "page-list.html", "image": imagePath + "marbodal-koks-farger.jpg" };
 var pageListData = {
-    "video-hero": { "video-url": videoPath + "jordnara.mp4", "header": "Jordnära", "preamble": "10 färger inspirerade av vår nordiska natur", "link": "Se alla våra färger" },
+    "video-hero": { "video-url": videoJordnara, "video-poster-url": imagePath + "posterJordnara.jpg", "header": "Jordnära", "preamble": "10 färger inspirerade av vår nordiska natur", "link": "Se alla våra färger" },
     "description": { "header": "Från de grönaste skogarna till de blåaste haven. Från de granitgrå bergen till de vidsträckta sandstränderna.", "preamble": "Från vintermorgonens frost till sommaråskans mullrande framfart. För att finna det vi sökte letade vi där allt en gång började. I vår natur. Här fann vi vår nya färgkollektion. Vi kallar den Jordnära.", "header-color": "#C3A472" },
     "sections": {
         "colors": [
@@ -157,7 +167,7 @@ var pageDetailsData = {
         },
         "video-reveal": {
             "header": "Tall",
-            "video": videoPath + "tall.mp4",
+            "video": videoTall,
             "image-count": "20",
             "image-name": imagePath + "animations/tall_000"
         },
@@ -203,7 +213,7 @@ var pageDetailsData = {
         },
         "video-reveal": {
             "header": "Frost",
-            "video": videoPath + "frost.mp4",
+            "video": videoFrost,
             "image-count": "20",
             "image-name": imagePath + "animations/frost_000"
         },
@@ -256,7 +266,7 @@ var pageDetailsData = {
         },
         "video-reveal": {
             "header": "Moln",
-            "video": videoPath + "moln.mp4",
+            "video": videoMoln,
             "image-count": "20",
             "image-name": imagePath + "animations/Moln_000"
         },
@@ -301,7 +311,7 @@ var pageDetailsData = {
         },
         "video-reveal": {
             "header": "Åska",
-            "video": videoPath + "aska.mp4",
+            "video": videoAska,
             "image-count": "20",
             "image-name": imagePath + "animations/Aska_000"
         },
@@ -346,7 +356,7 @@ var pageDetailsData = {
         },
         "video-reveal": {
             "header": "Granit",
-            "video": videoPath + "granit.mp4",
+            "video": videoGranit,
             "image-count": "20",
             "image-name": imagePath + "animations/Granit_000"
         },
@@ -390,7 +400,7 @@ var pageDetailsData = {
         },
         "video-reveal": {
             "header": "Frö",
-            "video": videoPath + "fro.mp4",
+            "video": videoFro,
             "image-count": "20",
             "image-name": imagePath + "animations/Frö_000"
         },
@@ -434,7 +444,7 @@ var pageDetailsData = {
         },
         "video-reveal": {
             "header": "Sand",
-            "video": videoPath + "sand.mp4",
+            "video": videoSand,
             "image-count": "20",
             "image-name": imagePath + "animations/Sand_000"
         },
@@ -480,7 +490,7 @@ var pageDetailsData = {
         },
         "video-reveal": {
             "header": "Lin",
-            "video": videoPath + "lin.mp4",
+            "video": videoLin,
             "image-count": "20",
             "image-name": imagePath + "animations/Lin_000"
         },
@@ -526,7 +536,7 @@ var pageDetailsData = {
         },
         "video-reveal": {
             "header": "Bark",
-            "video": videoPath + "bark.mp4",
+            "video": videoBark,
             "image-count": "20",
             "image-name": imagePath + "animations/Bark_000"
         },
@@ -570,7 +580,7 @@ var pageDetailsData = {
         },
         "video-reveal": {
             "header": "Hav",
-            "video": videoPath + "hav.mp4",
+            "video": videoHav,
             "image-count": "20",
             "image-name": imagePath + "animations/Hav_000"
         },
