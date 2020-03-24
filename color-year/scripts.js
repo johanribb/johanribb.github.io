@@ -20,7 +20,7 @@ var navigationData = {
         { "title": "Sand", "label": "Beige", "url": getPageUrl("sand"), "image": assetsPath + "color-nav-2.png" },
         { "title": "Hav", "label": "Blå", "url": getPageUrl("hav"), "image": assetsPath + "color-nav-3.png" },
         { "title": "Åska", "label": "Mellangrå", "url": getPageUrl("aska"), "image": assetsPath + "color-nav-4.png" },
-        { "title": "Lin", "label": "Ljusgrön", "url": getPageUrl("lin"), "image": assetsPath + "color-nav-5.png" },
+        { "title": "Lin", "label": "Lingrön", "url": getPageUrl("lin"), "image": assetsPath + "color-nav-5.png" },
         { "title": "Bark", "label": "Brun", "url": getPageUrl("bark"), "image": assetsPath + "color-nav-6.png" },
         { "title": "Moln", "label": "Ljusgrå", "url": getPageUrl("moln"), "image": assetsPath + "color-nav-7.png" },
         { "title": "Frost", "label": "Vit", "url": getPageUrl("frost"), "image": assetsPath + "color-nav-8.png" },
@@ -28,6 +28,7 @@ var navigationData = {
         { "title": "Frö", "label": "Greige", "url": getPageUrl("fro"), "image": assetsPath + "color-nav-10.png" }
     ]
 };
+
 
 var contactUsData = {
     "header": "Prata färg med våra köksdesigners", "preamble": "Boka ett möte med en av våra köksdesigners. Vi går igenom dina behov, köksdrömmar, stilar och lösningar. Vi träffas digitalt, på telefon eller i butik", "link": "Boka möte nu", "url": "#"
@@ -237,7 +238,8 @@ var pageDetailsData = {
                 { "name": "Aspekt Frost", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "aspekt-frost.jpg" },
                 { "name": "Arkitekt Frost", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "arkitekt-frost.jpg" },
                 { "name": "Ekerö frost", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "ekero-frost.jpg" },
-                { "name": "Torö2 frost", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "ekero-frost.jpg" },
+                { "name": "Torö2 Frost/Ek", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "toro-frost-ek.jpg" },
+                { "name": "Torö2 Frost/Ask", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "toro-frost-ask.jpg" },
                 { "name": "Viken Frost", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "viken-frost.jpg" },
                 { "name": "Vinga Frost", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "vinga-frost.jpg" },
                 { "name": "Vollo Frost", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "vollo-frost.jpg" },
@@ -375,7 +377,8 @@ var pageDetailsData = {
                 { "name": "Arkitekt Plus Granit", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "arkitekt-plus-granit.jpg" },
                 { "name": "Fagerö Granit", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "fagero-granit.jpg" },
                 { "name": "Form Granit", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "form-granit.jpg" },
-                { "name": "Lindö Granit", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "lindo-granit.jpg" }
+                { "name": "Lindö Ek Granit", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "lindo-granit.jpg" },
+                { "name": "Vinga Granit", "description": "", "url": "#", "padded-image": "true", "image": imagePath + "vinga-granit.jpg" }
             ]
         }
     },
@@ -604,6 +607,7 @@ var pageDetailsData = {
         }
     }
 };
+
 
 
 var components = ["base-styles", "header", "product-hero", "product-description", "static-slider", "video-hero", "color-list", "color-navigation", "image-text", "video-reveal", "product-scroll-list", "color-swoosh", "product-contact"];
